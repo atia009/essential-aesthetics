@@ -56,22 +56,6 @@ const pdfs = document.querySelector(".pdfs");
 const faqs = document.querySelector(".faqs");
 
 // functions
-function updateActive()
-{
- const pages = document.querySelectorAll(".page__link");
- pages.forEach(function(page) 
- {
-  if (page.innerHTML === "Patient Resources")
-  {
-   page.classList.add("active");
-  }
-  else 
-  {
-   page.classList.remove("active");
-  }
- })
-}
-
 function loadHtml()
 {
  resources.insertAdjacentHTML(`afterbegin`, `<h1 class="resources__title">Patient Resources</h1>`);
@@ -141,6 +125,5 @@ function toggleDisplay(element, displayValue)
 // event listener
 window.addEventListener("DOMContentLoaded", function() 
 {
- updateActive();
  loadHtml();
 })

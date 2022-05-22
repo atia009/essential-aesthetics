@@ -40,11 +40,11 @@ function loadFooter()
    <h4 class="foot-tab__title">Quick Links</h4>
    <ul class="foot-tab__list">
     <li class="foot-tab__item"><a href="index.html" class="foot-tab__link">Home</a></li> 
-    <li class="foot-tab__item"><a href="about.html" class="foot-tab__link">About</a></li> 
-    <li class="foot-tab__item"><a href="services.html" class="foot-tab__link">Services</a></li> 
-    <li class="foot-tab__item"><a href="products.html" class="foot-tab__link">Products</a></li> 
-    <li class="foot-tab__item"><a href="specials.html" class="foot-tab__link">Specials</a></li> 
-    <li class="foot-tab__item"><a href="patient.html" class="foot-tab__link">Patient Resources</a></li> 
+    <li class="foot-tab__item"><a href="/about.html" class="foot-tab__link">About</a></li> 
+    <li class="foot-tab__item"><a href="/services.html" class="foot-tab__link">Services</a></li> 
+    <li class="foot-tab__item"><a href="/products.html" class="foot-tab__link">Products</a></li> 
+    <li class="foot-tab__item"><a href="/specials.html" class="foot-tab__link">Specials</a></li> 
+    <li class="foot-tab__item"><a href="/patient.html" class="foot-tab__link">Patient Resources</a></li> 
    </ul>
   </div>
   <div class="foot-bottom">
@@ -59,6 +59,46 @@ function loadFooter()
     </div>
   </div>`
 }
+
+function startLinkFunctionality() {
+ const pages = Array.from(document.querySelectorAll(".page__link"));
+ const currentLink = document.URL;
+ updateActive(pages, currentLink);
+ updateLinks(pages, currentLink);
+}
+
+function updateActive(links, currentLink) {
+  links.forEach((link) => 
+  {
+   if (currentLink.includes(link.getAttribute(`href`))) {
+    link.classList.add("active");
+   }
+   else {
+    link.classList.remove("active");
+   }
+  })
+}
+
+function updateLinks(links, currentLink) {
+  if (currentLink.includes(`index.html`)) {
+    links.forEach((link) => {
+      updatePath(link, link.getAttribute(`href`), ``, `pages/`);
+    });
+  } else {
+    links.forEach((link) => {
+      updatePath(link, link.getAttribute(`href`), `../`, ``);
+    });
+  }
+}
+
+function updatePath(link, currentPath, homeDir, pagesDir) {
+  if (currentPath.includes(`index`)) {
+    link.setAttribute(`href`, homeDir.concat(``, currentPath));
+  } else {
+    link.setAttribute(`href`, pagesDir.concat(``, currentPath));
+  }
+}
+
 
 function toggleNav() 
 {
@@ -134,6 +174,7 @@ window.addEventListener("DOMContentLoaded", function()
 {
  loadHeader();
  loadFooter();
+ startLinkFunctionality();
  toggleNav();
  addBtnFunctionality();
 })

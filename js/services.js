@@ -45,22 +45,6 @@ const showcase = document.querySelector(".showcase");
 const services = document.querySelector(".services");
 
 // functions
-function updateActive()
-{
- const pages = document.querySelectorAll(".page__link");
- pages.forEach(function(page) 
- {
-  if (page.innerHTML === "Services")
-  {
-   page.classList.add("active");
-  }
-  else 
-  {
-   page.classList.remove("active");
-  }
- })
-}
-
 function loadHtml()
 {
  loadShowcase();
@@ -96,6 +80,5 @@ function loadServices()
 // event listeners
 window.addEventListener("DOMContentLoaded", function() 
 {
- updateActive();
  loadHtml();
 })

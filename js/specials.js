@@ -27,22 +27,6 @@ const banner = document.querySelector(".banner");
 const specials = document.querySelector(".specials");
 
 // functions
-function updateActive()
-{
- const pages = document.querySelectorAll(".page__link");
- pages.forEach(function(page) 
- {
-  if (page.innerHTML === "Specials")
-  {
-   page.classList.add("active");
-  }
-  else 
-  {
-   page.classList.remove("active");
-  }
- })
-}
-
 function loadHtml()
 { 
  loadBanner();
@@ -71,6 +55,5 @@ function loadSpecials()
 // event listener
 window.addEventListener("DOMContentLoaded", function() 
 {
- updateActive();
  loadHtml();
 })

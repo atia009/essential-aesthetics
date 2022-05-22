@@ -29,22 +29,6 @@ const banner = document.querySelector(".banner");
 const brands = document.querySelector(".brands");
 
 // functions
-function updateActive()
-{
- const pages = document.querySelectorAll(".page__link");
- pages.forEach(function(page) 
- {
-  if (page.innerHTML === "Products")
-  {
-   page.classList.add("active");
-  }
-  else 
-  {
-   page.classList.remove("active");
-  }
- })
-}
-
 function loadHtml()
 {
  loadBanner();
@@ -171,7 +155,6 @@ function updateDescInterface(screenSize)
 // event listeners
 window.addEventListener("DOMContentLoaded", function() 
 {
- updateActive();
  loadHtml();
  updateDescInterface(mediaDesktop);
 })

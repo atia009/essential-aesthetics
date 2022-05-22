@@ -29,22 +29,6 @@ const mission = document.querySelector(".mission");
 const team = document.querySelector(".team");
 
 // functions
-function updateActive()
-{
- const pages = document.querySelectorAll(".page__link");
- pages.forEach(function(page) 
- {
-  if (page.innerHTML === "About")
-  {
-   page.classList.add("active");
-  }
-  else 
-  {
-   page.classList.remove("active");
-  }
- })
-}
-
 function loadHtml()
 {
  loadMission();
@@ -78,6 +62,5 @@ function loadTeam()
 // event listeners
 window.addEventListener("DOMContentLoaded", function() 
 {
- updateActive();
  loadHtml();
 })

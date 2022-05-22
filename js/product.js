@@ -159,22 +159,6 @@ const searchContainer = document.querySelector(".search-container");
 const searchBG = document.querySelector(".search-bg");
 
 // functions
-function updateActive()
-{
- const pages = document.querySelectorAll(".page__link");
- pages.forEach(function(page) 
- {
-  if (page.innerHTML === "Products")
-  {
-   page.classList.add("active");
-  }
-  else 
-  {
-   page.classList.remove("active");
-  }
- })
-}
-
 function updateTitle()
 {
  const title = document.querySelector(".title");
@@ -579,7 +563,6 @@ function storeBrand(brandName, brandIndex)
 // event listener
 window.addEventListener("DOMContentLoaded", function() 
 {
- updateActive();
  updateTitle();
  loadHtml();
 })

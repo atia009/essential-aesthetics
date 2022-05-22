@@ -40,22 +40,6 @@ const banner = document.querySelector(".banner");
 const showcase = document.querySelector(".showcase");
 
 // functions
-function updateActive()
-{
- const pages = document.querySelectorAll(".page__link");
- pages.forEach(function(page) 
- {
-  if (page.innerHTML === "Home")
-  {
-   page.classList.add("active");
-  }
-  else 
-  {
-   page.classList.remove("active");
-  }
- })
-}
-
 function loadHtml()
 {
  loadBanner();
@@ -96,6 +80,5 @@ function loadCards()
 // event listeners
 window.addEventListener("DOMContentLoaded", function() 
 {
- updateActive();
  loadHtml();
 })
