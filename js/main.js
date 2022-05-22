@@ -2,18 +2,18 @@
 function loadHeader()
 {
  document.querySelector(".header").innerHTML = ` <div class="logo">
-   <a href="index.html" class="logo__link"><h1 class="logo__title">Essential Aesthetics</h1></a>
-   <a href="index.html" class="logo__link"><p class="logo__subtitle">By Essential Care Medical</p></a>
+   <a href="index.html" class="logo__link --page-link"><h1 class="logo__title">Essential Aesthetics</h1></a>
+   <a href="index.html" class="logo__link --page-link"><p class="logo__subtitle">By Essential Care Medical</p></a>
   </div>
   <nav class="nav">
    <button class="nav__btn"><i class="fas fa-bars nav__enter"></i></button>
    <ul class="pages hidden">
-    <li class="page"><a href="index.html" class="page__link">Home</a></li>
-    <li class="page"><a href="about.html" class="page__link">About</a></li>
-    <li class="page"><a href="services.html" class="page__link">Services</a></li>
-    <li class="page"><a href="products.html" class="page__link">Products</a></li>
-    <li class="page"><a href="specials.html" class="page__link">Specials</a></li>
-    <li class="page"><a href="patient.html" class="page__link">Patient Resources</a></li>
+    <li class="page"><a href="index.html" class="page__link --page-link">Home</a></li>
+    <li class="page"><a href="about.html" class="page__link --page-link">About</a></li>
+    <li class="page"><a href="services.html" class="page__link --page-link">Services</a></li>
+    <li class="page"><a href="products.html" class="page__link --page-link">Products</a></li>
+    <li class="page"><a href="specials.html" class="page__link --page-link">Specials</a></li>
+    <li class="page"><a href="patient.html" class="page__link --page-link">Patient Resources</a></li>
    </ul>
   </nav>`
 }
@@ -39,12 +39,12 @@ function loadFooter()
   <div class="foot-tab">
    <h4 class="foot-tab__title">Quick Links</h4>
    <ul class="foot-tab__list">
-    <li class="foot-tab__item"><a href="index.html" class="foot-tab__link">Home</a></li> 
-    <li class="foot-tab__item"><a href="/about.html" class="foot-tab__link">About</a></li> 
-    <li class="foot-tab__item"><a href="/services.html" class="foot-tab__link">Services</a></li> 
-    <li class="foot-tab__item"><a href="/products.html" class="foot-tab__link">Products</a></li> 
-    <li class="foot-tab__item"><a href="/specials.html" class="foot-tab__link">Specials</a></li> 
-    <li class="foot-tab__item"><a href="/patient.html" class="foot-tab__link">Patient Resources</a></li> 
+    <li class="foot-tab__item"><a href="index.html" class="foot-tab__link --page-link">Home</a></li> 
+    <li class="foot-tab__item"><a href="about.html" class="foot-tab__link --page-link">About</a></li> 
+    <li class="foot-tab__item"><a href="services.html" class="foot-tab__link --page-link">Services</a></li> 
+    <li class="foot-tab__item"><a href="products.html" class="foot-tab__link --page-link">Products</a></li> 
+    <li class="foot-tab__item"><a href="specials.html" class="foot-tab__link --page-link">Specials</a></li> 
+    <li class="foot-tab__item"><a href="patient.html" class="foot-tab__link --page-link">Patient Resources</a></li> 
    </ul>
   </div>
   <div class="foot-bottom">
@@ -61,7 +61,7 @@ function loadFooter()
 }
 
 function startLinkFunctionality() {
- const pages = Array.from(document.querySelectorAll(".page__link"));
+ const pages = Array.from(document.querySelectorAll(".--page-link"));
  const currentLink = document.URL;
  updateActive(pages, currentLink);
  updateLinks(pages, currentLink);
