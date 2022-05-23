@@ -1,318 +1,399 @@
-/* variables */
+/* CSS DIRECTORY
+        1. =GLOBAL SETTINGS (variables, resets)
+        2. =PRIMARY LAYOUT (body, main)
+        3. =SECONDARY LAYOUT (header, footer, sidebar)
+        4. =TERTIARY LAYOUT (section)
+        5. =TEXT RELATED (headings, paragraphs, lists)
+        6. =GENERAL STYLES (buttons, forms)
+        7. =GENERAL CLASSES (modifier classes)
+        8. =SALIENT FEATURES (images, links, other important features)
+        9. =ANIMATIONS
+        10.=MEDIA QUERIES (400px, 1050px) 
+*/
+
+/* ===============
+   GLOBAL SETTINGS
+   =============== */
+
 :root {
-  --dark: #555455;
-  --med: #a3a2a3;
-  --lt: #fff;
-  --primary: #9fbcbe;
-  --secondary: #f8fbfa;
+    --bg-color: #f3f3f3;
+    --dark: #555455;
+    --med: #a3a2a3;
+    --lt: #fff;
+    --primary: #9fbcbe;
+    --secondary: #f8fbfa;
+}
+  
+*:where(:not(img, svg, video):not(svg *, symbol *)) {
+    all: unset;
+    display: revert;
 }
 
-/* fonts */
-@font-face {
-  font-family: "Josefin Sans Regular";
-  src: url(../fonts/JosefinSans-Regular.ttf);
-}
-
-@font-face {
-  font-family: "Josefin Sans Bold";
-  src: url(../fonts/JosefinSans-Bold.ttf);
-}
-
-@font-face {
-  font-family: "Josefin Sans Light";
-  src: url(../fonts/JosefinSans-Light.ttf);
-}
-
-@font-face {
-  font-family: "Playfair Display Regular";
-  src: url(../fonts/PlayfairDisplay-Regular.ttf);
-}
-@font-face {
-  font-family: "Playfair Display SemiBold";
-  src: url(../fonts/PlayfairDisplay-SemiBold.ttf);
-}
-
-@font-face {
-  font-family: "Playfair Display Bold";
-  src: url(../fonts/PlayfairDisplay-Bold.ttf);
-}
-
-/* global styles */
 html {
-  box-sizing: border-box;
-  font-size: 16px;
-  font-family: "Playfair Display Regular";
-  min-width: 350px;
+    box-sizing: border-box;
+    font-family: "Playfair Display Regular";
+    font-size: 16px;
+    min-width: 375px;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+    box-sizing: inherit;
 }
 
-body {
-  color: var(--dark);
-  display: flex;
-  flex-direction: column;
-  font-size: 1.1rem;
-  margin: 0 auto;
-  min-height: 100vh;
-}
-
-main {
-  display: block;
-  flex: 1 0 auto;
-}
-
-a {
-  color: var(--lt);
-  font-family: "Josefin Sans Bold";
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
+a,
 button {
-  background-color: transparent;
-  border: none;
-  padding: 0px;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-family: "Josefin Sans Bold";
-  text-transform: uppercase;
-}
-
-i {
-  color: var(--dark);
-}
-
-select {
-  color: var(--dark);
+    cursor: revert;
 }
 
 ul {
-  list-style: none;
-  padding-left: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-/* layout styling */
-.wrap-horizontal {
-  padding-left: 10px;
-  padding-right: 10px;
+img {
+    max-width: 100%;
 }
 
-.wrap-vertical {
-  padding-bottom: 15px;
-  padding-top: 15px;
+:where([contenteditable]) {
+    -moz-user-modify: read-write;
+    -webkit-user-modify: read-write;
+    overflow-wrap: break-word;
+    -webkit-line-break: after-white-space;
 }
 
-/* header */
+:where([draggable="true"]) {
+    -webkit-user-drag: element;
+}
+  
+  /* ===============
+     PRIMARY LAYOUT
+     =============== */
+  
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+}
+
+main {
+    display: block;
+    flex: 1 0 auto;
+}
+
+/* ===============
+SECONDARY LAYOUT
+=============== */
+
 .header {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 10px;
-  padding-top: 10px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
-.logo__title {
-  color: var(--dark);
-  font-size: 1.1rem;
-  margin: 0px;
-  text-transform: uppercase;
-}
-
-.logo__subtitle {
-  color: var(--dark);
-  font-family: "Playfair Display Regular";
-  font-size: .7rem;
-  margin: 0px;
-  text-transform: initial;
-}
-
-/* nav */
 .nav {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
-.nav__btn {
-  font-size: 2rem;
-  text-align: right;
-}
-
-.pages {
-  margin: 0px;
-}
-
-.page {
-  margin-bottom: 60px;
-}
-
-.page__link {
-  font-family: "Josefin Sans Regular";
-  font-size: 2.1rem;
-  text-transform: uppercase;
-}
-
-/* footer */
 .footer {
-  align-items: center;
-  background-color: var(--primary);
-  color: var(--lt);
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 20px;
-  padding-top: 20px;
-}
-
-.foot-tab__item, .foot-tab__link {
-  font-family: "Josefin Sans Light";
-  text-transform: initial;
+    align-items: center;
+    background-color: var(--primary);
+    color: var(--lt);
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 .foot-tab {
-  margin: 20px 0px 0px 0px;
-  text-align: center;
+    margin: 20px 0px 0px 0px;
+    text-align: center;
 }
 
-.foot-tab__title {
-  margin: 0px;
-  text-transform: uppercase;
-}
-
-.foot-tab__list {
-  margin: 5px 0px 0px 0px;
-}
-
-/* social */
-.social {
-  margin: 20px 0px;
-  text-align: center;
-}
-
-.social__icon {
-  color: var(--lt);
-  font-size: 1.8rem;
-  margin: 0px 7.5px;
-}
-
-/* copyright */
 .copyright {
-  font-size: .7rem;
-  margin-bottom: 20px;
-  text-align: center;
+    font-size: .7rem;
+    margin-bottom: 20px;
+    text-align: center;
 }
+  
+  /* ===============
+     TERTIARY LAYOUT
+     =============== */
+  
+  /* ===============
+     TEXT RELATED
+     =============== */
 
-.copyright__company, .copyright__info {
-  margin: 0px;
-}
-
-/* toggles */
-.active {
-  font-family: "Josefin Sans Bold";
-}
-
-.hidden {
-  display: none;
-}
-
-.nav-invert {
-  background-color: var(--primary);
-  height: 100vh;
-  margin: -20px -10px;
-  padding: 15px 10px;
-  width: 100vw;
-}
-
-.sticky {
-  position: sticky;
-  top: 0;
-  z-index: 2;
-}
-
-/* media queries */
-@media (min-width: 900px) {
-
-  button:hover, i:hover {
-    cursor: pointer;
-  }
-
-  .foot-tab__link:hover, .page__link:hover {
-    text-decoration: underline;
-  }
-
-  .wrap-horizontal {
-    padding-left: 35px;
-    padding-right: 35px;
+  @font-face {
+    font-family: "Josefin Sans Regular";
+    src: url(../fonts/JosefinSans-Regular.ttf);
   }
   
-  .wrap-vertical {
-    padding-bottom: 45px;
-    padding-top: 45px;
+  @font-face {
+    font-family: "Josefin Sans Bold";
+    src: url(../fonts/JosefinSans-Bold.ttf);
+  }
+  
+  @font-face {
+    font-family: "Josefin Sans Light";
+    src: url(../fonts/JosefinSans-Light.ttf);
+  }
+  
+  @font-face {
+    font-family: "Playfair Display Regular";
+    src: url(../fonts/PlayfairDisplay-Regular.ttf);
+  }
+  @font-face {
+    font-family: "Playfair Display SemiBold";
+    src: url(../fonts/PlayfairDisplay-SemiBold.ttf);
+  }
+  
+  @font-face {
+    font-family: "Playfair Display Bold";
+    src: url(../fonts/PlayfairDisplay-Bold.ttf);
+  }
+  
+  h1,
+  h2,
+  h3, 
+  h4, 
+  h5 {
+    font-family: "Josefin Sans Bold";
+    text-transform: uppercase;
+  }
+  
+  p {
+    font-family: "Libre Baskerville", serif;
+  }
+  
+  strong {
+    color: var(--lt-color);
+    font-family: "Libre Baskerville", serif;
+    font-weight: 700;
   }
 
-  .header {
-    padding-bottom: 20px;
-    padding-top: 20px;
+  .logo__title {
+    color: var(--dark);
+    font-size: 1.1rem;
+    margin: 0px;
+    text-transform: uppercase;
   }
 
-  .nav__btn {
-    display: none;
+  .logo__subtitle {
+    color: var(--dark);
+    font-family: "Playfair Display Regular";
+    font-size: .7rem;
+    margin: 0px;
+    text-transform: initial;
   }
 
   .pages {
-    display: flex;
-  }
-
-  .page {
-    margin: 0px 0px 0px 15px;
-  }
-
-  .page__link {
-    color: var(--dark);
-    font-size: 1rem;
-  }
-
-  .foot-tab {
-    margin-top: 35px;
-  }
-
-  .foot-bottom {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 70px;
-    width: 100%;
-  }
-
-  .copyright, .social {
-    align-self: flex-end;
     margin: 0px;
   }
 
-  .copyright {
+  .page {
+    margin-bottom: 60px;
+  }
+
+  .page__link {
+    font-family: "Josefin Sans Regular";
+    font-size: 2.1rem;
+    text-transform: uppercase;
+  }
+
+  .foot-tab__item {
+    font-family: "Josefin Sans Light";
+    text-transform: initial;
+  }
+
+  .foot-tab__title {
+    margin: 0px;
+    text-transform: uppercase;
+  }
+
+  .foot-tab__list {
+    margin: 5px 0px 0px 0px;
+  }
+  
+  .social {
+    margin: 20px 0px;
+    text-align: center;
+  }
+
+  .copyright__company, .copyright__info {
+    margin: 0px;
+  }
+  
+  /* ===============
+     GENERAL STYLES
+     =============== */
+  
+  button {
+    background-color: transparent;
+    border: none;
+    padding: 0px;
+  }
+
+  select {
+    color: var(--dark);
+  }
+
+  .nav__btn {
+    font-size: 2rem;
     text-align: right;
   }
-}
-
-@media (min-width: 1250px) {
   
+  /* ===============
+     GENERAL CLASSES
+     =============== */
+
   .wrap-horizontal {
-    padding-left: 65px;
-    padding-right: 65px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
-
+    
   .wrap-vertical {
-    padding-bottom: 75px;
-    padding-top: 75px;
+    padding-bottom: 15px;
+    padding-top: 15px;
   }
 
-  .foot-bottom {
-    margin-top: 50px;
+  .active {
+    font-family: "Josefin Sans Bold";
   }
-}
+      
+  .hidden {
+    display: none;
+  }
+      
+  .nav-invert {
+    background-color: var(--primary);
+    height: 100vh;
+    margin: -20px -10px;
+    padding: 15px 10px;
+    width: 100vw;
+  }
+
+  .sticky {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+  
+  /* ===============
+     SALIENT FEATURES
+     =============== */
+  
+  svg {
+    fill: var(--bg-color);
+  }
+
+  a {
+    color: var(--lt);
+    font-family: "Josefin Sans Bold";
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  i {
+    color: var(--dark);
+  }
+
+  .foot-tab__link {
+    font-family: "Josefin Sans Light";
+    text-transform: initial;
+  }
+
+  .social__icon {
+    color: var(--lt);
+    font-size: 1.8rem;
+    margin: 0px 7.5px;
+  }
+  
+  /* ===============
+     MEDIA QUERIES
+     =============== */
+  
+  @media (min-width: 400px) {
+    button:hover, i:hover {
+        cursor: pointer;
+    }
+
+    .foot-tab__link:hover, .page__link:hover {
+        text-decoration: underline;
+    }
+
+    .wrap-horizontal {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+        
+    .wrap-vertical {
+        padding-bottom: 45px;
+        padding-top: 45px;
+    }
+
+    .header {
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+
+    .nav__btn {
+        display: none;
+    }
+
+    .pages {
+        display: flex;
+    }
+
+    .page {
+        margin: 0px 0px 0px 15px;
+    }
+
+    .page__link {
+        color: var(--dark);
+        font-size: 1rem;
+    }
+
+    .foot-tab {
+        margin-top: 35px;
+    }
+
+    .foot-bottom {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 70px;
+        width: 100%;
+    }
+
+    .copyright, .social {
+        align-self: flex-end;
+        margin: 0px;
+    }
+
+    .copyright {
+        text-align: right;
+    }
+  }
+  
+  @media (min-width: 1050px) {
+    .wrap-horizontal {
+        padding-left: 65px;
+        padding-right: 65px;
+    }
+    
+    .wrap-vertical {
+        padding-bottom: 75px;
+        padding-top: 75px;
+    }
+    
+    .foot-bottom {
+        margin-top: 50px;
+    }
+  }
+  
