@@ -80,7 +80,7 @@ function updateActive(links, currentLink) {
 }
 
 function updateLinks(links, currentLink) {
-  if (currentLink.includes(`index.html`)) {
+  if (currentLink.includes(`index.html`) || !currentLink.endsWith(`html`)) {
     links.forEach((link) => {
       updatePath(link, link.getAttribute(`href`), ``, `pages/`);
     });
