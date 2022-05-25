@@ -73,6 +73,7 @@ img {
      =============== */
   
 body {
+    background-color: var(--lt);
     display: flex;
     flex-direction: column;
     margin: 0 auto;
