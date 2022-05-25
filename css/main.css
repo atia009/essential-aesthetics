@@ -8,7 +8,7 @@
         7. =GENERAL CLASSES (modifier classes)
         8. =SALIENT FEATURES (images, links, other important features)
         9. =ANIMATIONS
-        10.=MEDIA QUERIES (400px, 1050px) 
+        10.=MEDIA QUERIES (900px, 1050px) 
 */
 
 /* ===============
@@ -326,7 +326,7 @@ SECONDARY LAYOUT
      MEDIA QUERIES
      =============== */
   
-  @media (min-width: 400px) {
+  @media (min-width: 900px) {
     button:hover, i:hover {
         cursor: pointer;
     }
