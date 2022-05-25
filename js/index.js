@@ -59,7 +59,7 @@ function loadBanner()
 function loadShowcase()
 {
  showcase.innerHTML = `<h1 class="showcase__title">${showcaseObject.title}</h1>`;
- showcase.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("${showcaseObject.src}")`;
+ showcase.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("${showcaseObject.src}")`;
 }
 
 function loadCards()
