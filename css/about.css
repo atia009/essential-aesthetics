@@ -1,14 +1,14 @@
 /* CSS DIRECTORY
         1. =GLOBAL SETTINGS (imports)
-        2. =PRIMARY LAYOUT (body, projects)
-        3. =SECONDARY LAYOUT (header, footer, sidebar)
-        4. =TERTIARY LAYOUT (home, about)
+        2. =PRIMARY LAYOUT (team)
+        3. =SECONDARY LAYOUT (mission)
+        4. =TERTIARY LAYOUT
         5. =TEXT RELATED (headings, paragraphs, lists)
         6. =GENERAL STYLES (buttons, forms)
         7. =GENERAL CLASSES (modifier classes)
         8. =SALIENT FEATURES (images, links, other important features)
         9. =ANIMATIONS
-        10.=MEDIA QUERIES (400px, 700px, 900px, 1050px) 
+        10.=MEDIA QUERIES (900px, 1050px) 
 */
 
 /* ===============
@@ -36,6 +36,8 @@
   
 .member {
     background-color: var(--secondary);
+    border-radius: 3px;
+    box-shadow: 0 10px 60px -20px rgba(0, 0, 0, 0.45);
     margin-top: 40px;
     max-width: 600px;
     width: 85%;
@@ -48,8 +50,23 @@
   =============== */
 
 .mission {
-    padding-bottom: 30px;
-    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.mission-container {
+    position: relative;
+}
+
+.mission-container::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.45);
+    display: block;
+    position: absolute;
+    height: 99%;
+    width: 100%;
+    z-index: 2;
 }
 
 /* ===============
@@ -61,17 +78,23 @@
   =============== */
 
 .mission__title {
-    margin: 30px 0px 0px 0px;
+    font-size: 2rem;
+    color: var(--lt);
+    position: absolute;
+    left: 50%;
     text-transform: uppercase;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    z-index: 3;
 }
 
 .mission__subtitle {
     font-size: 0.7rem;
-    margin: 0px;
+    margin: 20px 0 0;
 }
 
 .mission__body {
-    margin: 15px auto 0px auto;
+    margin: 15px 20px 0;
     max-width: 600px;
 }
 
@@ -84,7 +107,7 @@
 
 .member__body {
     margin: 20px auto;
-    max-width: 400px; 
+    max-width: 800px; 
     width: 90%;
 }
   
@@ -109,12 +132,12 @@
 
 .mission__img {
     object-fit: cover;
-    height: 250px;
-    margin: -15px -10px;
+    height: 300px;
     width: 100vw;
 }
 
 .member__img {
+    border-radius: 3px;
     object-fit: cover;
     object-position: top;
     height: 400px;
@@ -130,24 +153,14 @@
   MEDIA QUERIES
   =============== */
 
-@media (min-width: 400px) {
-}
-
-@media (min-width: 700px) {
-}
-
 @media (min-width: 900px) {
-    .mission {
-        padding-bottom: 60px;
-      }
-    
-    .mission__img {
-        height: 400px;
-        margin: -45px -35px;
-    }
-    
     .mission__title {
         margin-top: 60px;
+    }
+
+    .mission__body {
+        text-align: left;
+        width: 500px;
     }
     
     .member {
@@ -162,7 +175,6 @@
 @media (min-width: 1050px) {
     .mission__img {
         height: 500px;
-        margin: -75px -65px;
     }
 
     .mission__title {
