@@ -1,117 +1,171 @@
+/* CSS DIRECTORY
+        1. =GLOBAL SETTINGS (imports)
+        2. =PRIMARY LAYOUT (body, projects)
+        3. =SECONDARY LAYOUT (header, footer, sidebar)
+        4. =TERTIARY LAYOUT (home, about)
+        5. =TEXT RELATED (headings, paragraphs, lists)
+        6. =GENERAL STYLES (buttons, forms)
+        7. =GENERAL CLASSES (modifier classes)
+        8. =SALIENT FEATURES (images, links, other important features)
+        9. =ANIMATIONS
+        10.=MEDIA QUERIES (400px, 700px, 900px, 1050px) 
+*/
+
+/* ===============
+   GLOBAL SETTINGS
+   =============== */
+
 @import url("main.css");
 
-/* main */
+/* ===============
+  PRIMARY LAYOUT
+  =============== */
 
-/* mission */
-.mission {
-  padding-bottom: 30px;
-  text-align: center;
-}
-
-.mission__img {
-  object-fit: cover;
-  height: 250px;
-  margin: -15px -10px;
-  width: 100vw;
-}
-
-.mission__title {
-  margin: 30px 0px 0px 0px;
-  text-transform: uppercase;
-}
-
-.mission__subtitle {
-  font-size: 0.7rem;
-  margin: 0px;
-}
-
-.mission__body {
-  margin: 15px auto 0px auto;
-  max-width: 600px;
-}
-
-/* team */
 .team {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .team__divider {
-  background-color: rgba(0, 0, 0, 0.1);
-  height: 1px;
-  max-width: 600px;
-  width: 85%;
-
+    background-color: rgba(0, 0, 0, 0.1);
+    height: 1px;
+    max-width: 600px;
+    width: 85%;
+}
+  
+.member {
+    background-color: var(--secondary);
+    margin-top: 40px;
+    max-width: 600px;
+    width: 85%;
+    text-align: center;
 }
 
-.member {
-  background-color: var(--secondary);
-  margin-top: 40px;
-  max-width: 600px;
-  width: 85%;
-  text-align: center;
+
+/* ===============
+  SECONDARY LAYOUT
+  =============== */
+
+.mission {
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+/* ===============
+  TERTIARY LAYOUT
+  =============== */
+
+/* ===============
+  TEXT RELATED
+  =============== */
+
+.mission__title {
+    margin: 30px 0px 0px 0px;
+    text-transform: uppercase;
+}
+
+.mission__subtitle {
+    font-size: 0.7rem;
+    margin: 0px;
+}
+
+.mission__body {
+    margin: 15px auto 0px auto;
+    max-width: 600px;
 }
 
 .member__title {
-  border-bottom: 1px solid var(--primary);
-  margin: 0px;
-  padding: 10px 0px;
-  text-transform: initial;
-}
-
-.member__img {
-  object-fit: cover;
-  object-position: top;
-  height: 400px;
-  width: 100%;
+    border-bottom: 1px solid var(--primary);
+    margin: 0px;
+    padding: 10px 0px;
+    text-transform: initial;
 }
 
 .member__body {
-  margin: 20px auto;
-  max-width: 400px; 
-  width: 90%;
+    margin: 20px auto;
+    max-width: 400px; 
+    width: 90%;
 }
-
+  
 .member__contact {
-  color: var(--med);
-  font-family: "Josefin Sans Light";
-  margin: 0px auto 20px auto;
-  width: 90%;
+    color: var(--med);
+    font-family: "Josefin Sans Light";
+    margin: 0px auto 20px auto;
+    width: 90%;
 }
 
-@media (min-width: 900px)
-{
-  .mission {
-    padding-bottom: 60px;
-  }
+/* ===============
+  GENERAL STYLES
+  =============== */
 
-  .mission__img {
+/* ===============
+  GENERAL CLASSES
+  =============== */
+
+/* ===============
+  SALIENT FEATURES
+  =============== */
+
+.mission__img {
+    object-fit: cover;
+    height: 250px;
+    margin: -15px -10px;
+    width: 100vw;
+}
+
+.member__img {
+    object-fit: cover;
+    object-position: top;
     height: 400px;
-    margin: -45px -35px;
-  }
+    width: 100%;
+}
+  
 
-  .mission__title {
-    margin-top: 60px;
-  }
+/* ===============
+  ANIMATIONS
+  =============== */
 
-  .member {
-    margin-top: 60px;
-  }
+/* ===============
+  MEDIA QUERIES
+  =============== */
 
-  .member__body {
-    margin: 40px auto;
-  }
+@media (min-width: 400px) {
 }
 
-@media (min-width: 1250px) 
-{
-  .mission__img {
-    height: 500px;
-    margin: -75px -65px;
-  }
+@media (min-width: 700px) {
+}
 
-  .mission__title {
-    margin-top: 90px;
-  }
+@media (min-width: 900px) {
+    .mission {
+        padding-bottom: 60px;
+      }
+    
+    .mission__img {
+        height: 400px;
+        margin: -45px -35px;
+    }
+    
+    .mission__title {
+        margin-top: 60px;
+    }
+    
+    .member {
+        margin-top: 60px;
+    }
+    
+    .member__body {
+        margin: 40px auto;
+    }
+}
+
+@media (min-width: 1050px) {
+    .mission__img {
+        height: 500px;
+        margin: -75px -65px;
+    }
+
+    .mission__title {
+        margin-top: 90px;
+    }
 }
