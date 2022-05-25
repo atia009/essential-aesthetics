@@ -90,6 +90,8 @@ SECONDARY LAYOUT
 
 .header {
     align-items: center;
+    background-color: var(--lt);
+    box-shadow: 0 3px 5px rgba(57, 63, 72, 0.2);
     display: flex;
     justify-content: space-between;
     padding-bottom: 10px;
@@ -169,12 +171,12 @@ SECONDARY LAYOUT
   }
   
   p {
-    font-family: "Libre Baskerville", serif;
+    font-family: "Playfair Display Regular", serif;
   }
   
   strong {
     color: var(--lt-color);
-    font-family: "Libre Baskerville", serif;
+    font-family: "Playfair Display Regular", serif;
     font-weight: 700;
   }
 
@@ -315,6 +317,10 @@ SECONDARY LAYOUT
     margin: 0px 7.5px;
   }
   
+  /* ===============
+      ANIMATIONS
+     =============== */
+
   /* ===============
      MEDIA QUERIES
      =============== */
