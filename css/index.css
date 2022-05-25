@@ -51,8 +51,7 @@
 .banner {
     background-color: var(--primary);
     color: var(--lt);
-    padding-bottom: 15px;
-    padding-top: 15px;
+    padding: 20px 0;
     text-align: center;
 }
 
@@ -62,7 +61,7 @@
 
 .showcase__title {
     color: var(--lt);
-    font-family: "Josefin Sans Light";
+    font-family: "Josefin Sans Bold";
     font-size: 2rem;
     margin: 0 auto;
 }
@@ -81,16 +80,18 @@
 
 .banner__btn {
     background-color: var(--lt);
-    border-radius: 5px;
-    padding: 10px 0px;
+    border-radius: 3px;
+    padding: 10px 0;
+    margin-top: 15px;
     max-width: 325px;
     width: 100%;
 }
 
 .card-btn {
     background-color: var(--dark);
-    border-radius: 5px;
-    padding: 10px 40px;
+    border-radius: 3px;
+    padding: 10px 0;
+    width: 250px;
 }
 
 /* ===============
