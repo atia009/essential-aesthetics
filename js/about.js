@@ -37,8 +37,10 @@ function loadHtml()
 
 function loadMission()
 {
- mission.innerHTML = `<img src="${missionObject.src}" class="mission__img"/>
- <h2 class="mission__title">${missionObject.title}</h2>
+ mission.innerHTML = `<div class="mission-container">
+    <img src="${missionObject.src}" class="mission__img"/>
+    <h2 class="mission__title">${missionObject.title}</h2>
+ </div>
  <p class="mission__subtitle">${missionObject.location}</p>
  <p class="mission__body">${missionObject.statement}</p>`
 }
