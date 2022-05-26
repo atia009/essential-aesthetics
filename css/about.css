@@ -8,7 +8,7 @@
         7. =GENERAL CLASSES (modifier classes)
         8. =SALIENT FEATURES (images, links, other important features)
         9. =ANIMATIONS
-        10.=MEDIA QUERIES (900px, 1050px) 
+        10.=MEDIA QUERIES (900px) 
 */
 
 /* ===============
@@ -154,8 +154,8 @@
   =============== */
 
 @media (min-width: 900px) {
-    .mission__title {
-        margin-top: 60px;
+    .mission__img {
+        height: 500px;
     }
 
     .mission__body {
@@ -169,15 +169,5 @@
     
     .member__body {
         margin: 40px auto;
-    }
-}
-
-@media (min-width: 1050px) {
-    .mission__img {
-        height: 500px;
-    }
-
-    .mission__title {
-        margin-top: 90px;
     }
 }
