@@ -194,6 +194,7 @@ SECONDARY LAYOUT
     font-size: .7rem;
     margin: 0px;
     text-transform: initial;
+    text-align: left;
   }
 
   .pages {
