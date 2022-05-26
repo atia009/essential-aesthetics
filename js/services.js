@@ -57,7 +57,7 @@ function loadShowcase()
                        <button class="showcase__btn">
                         <i class="showcase__icon ${showcaseObject.icon}"></i>
                        </button>`
-  showcase.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("${showcaseObject.src}")`;
+  showcase.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("${showcaseObject.src}")`;
 }
 
 function loadServices()
@@ -65,13 +65,11 @@ function loadServices()
  let serviceItems = servicesList.map(function(service)
  {
   return `<li class="service">
-         <div class="service__inner">
            <h3 class="service__title">${service.title}</h3>
            <p class="service__body">${service.body}</p>
            <button class="service__btn bg--hover">
              <a href="${service.btnLink}" class="service__link">${service.btnText}</a>
            </button>
-         </div>
       </li>`
  })
   services.insertAdjacentHTML(`beforeend`, serviceItems.join(""));
