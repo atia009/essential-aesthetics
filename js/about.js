@@ -38,11 +38,11 @@ function loadHtml()
 function loadMission()
 {
  mission.innerHTML = `<div class="mission-container">
-    <img src="${missionObject.src}" class="mission__img"/>
     <h2 class="mission__title">${missionObject.title}</h2>
  </div>
  <p class="mission__subtitle">${missionObject.location}</p>
  <p class="mission__body">${missionObject.statement}</p>`
+ document.querySelector(`.mission-container`).style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("${missionObject.src}")`;
 }
 
 function loadTeam()
