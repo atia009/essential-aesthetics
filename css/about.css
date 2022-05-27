@@ -56,17 +56,11 @@
 }
 
 .mission-container {
+    background-position: center;
+    background-size: cover;
+    height: 300px;
     position: relative;
-}
-
-.mission-container::before {
-    content: "";
-    background-color: rgba(0, 0, 0, 0.45);
-    display: block;
-    position: absolute;
-    height: 99%;
     width: 100%;
-    z-index: 2;
 }
 
 /* ===============
@@ -130,11 +124,11 @@
   SALIENT FEATURES
   =============== */
 
-.mission__img {
+/* .mission__img {
     object-fit: cover;
     height: 300px;
     width: 100vw;
-}
+} */
 
 .member__img {
     border-radius: 3px;
@@ -154,7 +148,7 @@
   =============== */
 
 @media (min-width: 900px) {
-    .mission__img {
+    .mission-container {
         height: 500px;
     }
 
