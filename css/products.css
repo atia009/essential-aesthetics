@@ -8,7 +8,7 @@
         7. =GENERAL CLASSES (modifier classes)
         8. =SALIENT FEATURES (images, links, other important features)
         9. =ANIMATIONS
-        10.=MEDIA QUERIES (900px, 1250px) 
+        10.=MEDIA QUERIES (900px) 
 */
 
 /* ===============
@@ -23,8 +23,7 @@
 
 .banner {
     background-color: var(--primary);
-    margin: -15px -10px;
-    padding: 30px 0px;
+    padding: 40px 0px;
     text-align: center;
 }
 
@@ -33,7 +32,6 @@
   =============== */
 
 .brands {
-    margin: 15px 0px 0px;
     padding: 70px 0px;
     text-align: center;
 }
@@ -71,7 +69,7 @@
 
 .banner__title {
     color: var(--lt);
-    margin: 0px;
+    font-size: 2rem;
 }
 
 .brand__title {
@@ -110,10 +108,6 @@
   GENERAL CLASSES
   =============== */
 
-.wrap-vertical {
-    padding-bottom: 0px;
-}
-
 /* ===============
   SALIENT FEATURES
   =============== */
@@ -136,29 +130,14 @@
 
 @media (min-width: 900px) {
     .banner {
-        margin: -45px -35px;
+        padding: 60px 0;
     }
-    
+
     .brands {
-        margin-top: 45px;
+        padding: 100px 0;
     }
-    
+
     .brand__btn {
         display: none;
-    }
-    
-    .wrap-vertical {
-        padding-bottom: 0px;
-    }
-}
-
-@media (min-width: 1250px) {
-    .banner {
-        margin: -75px -65px;
-    }
-    
-    .brands {
-        margin-top: 75px;
-        padding: 100px 0px;
     }
 }
