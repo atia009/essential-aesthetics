@@ -1,115 +1,164 @@
+/* CSS DIRECTORY
+        1. =GLOBAL SETTINGS (imports)
+        2. =PRIMARY LAYOUT (brands)
+        3. =SECONDARY LAYOUT (banner)
+        4. =TERTIARY LAYOUT
+        5. =TEXT RELATED (headings, paragraphs, lists)
+        6. =GENERAL STYLES (buttons, forms)
+        7. =GENERAL CLASSES (modifier classes)
+        8. =SALIENT FEATURES (images, links, other important features)
+        9. =ANIMATIONS
+        10.=MEDIA QUERIES (900px, 1250px) 
+*/
+
+/* ===============
+   GLOBAL SETTINGS
+   =============== */
+
 @import url("main.css");
 
-/* layout */
-.wrap-vertical {
-  padding-bottom: 0px;
-}
+/* ===============
+  PRIMARY LAYOUT
+  =============== */
 
-/* banner */
 .banner {
-  background-color: var(--primary);
-  margin: -15px -10px;
-  padding: 30px 0px;
-  text-align: center;
+    background-color: var(--primary);
+    margin: -15px -10px;
+    padding: 30px 0px;
+    text-align: center;
 }
 
-.banner__title {
-  color: var(--lt);
-  margin: 0px;
-}
+/* ===============
+  SECONDARY LAYOUT
+  =============== */
 
-/* brands */
 .brands {
-  margin: 15px 0px 0px;
-  padding: 70px 0px;
-  text-align: center;
+    margin: 15px 0px 0px;
+    padding: 70px 0px;
+    text-align: center;
 }
 
 .brand {
-  margin: 0px auto;
-  max-width: 700px;
-  width: 100%;
-}
-
-.brand__title {
-  margin: 15px 0px;
-  text-transform: uppercase;
-}
-
-.brand:nth-of-type(1) .brand__title {
-  margin-top: 0px;
-}
+    margin: 0px auto;
+    max-width: 700px;
+    width: 100%;
+} 
 
 .brand__content {
-  background-position: center;
-  background-size: cover;
-  height: 400px;
-  margin: 0px auto;
-  max-width: 480px;
-  position: relative;
-  width: 100%;
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+    margin: 0px auto;
+    max-width: 480px;
+    position: relative;
+    width: 100%;
 }
 
 .brand__overlay {
-  background-color: rgba(255, 255, 255, 0.85);
-  display: block;
-  height: 100%;
-  width: 100%;
+    background-color: rgba(255, 255, 255, 0.85);
+    display: block;
+    height: 100%;
+    width: 100%;
 }
 
-.brand__btn {
-  position: absolute;
-  top: 0px;
-  right: 0px;
+/* ===============
+  TERTIARY LAYOUT
+  =============== */
+
+/* ===============
+  TEXT RELATED
+  =============== */
+
+.banner__title {
+    color: var(--lt);
+    margin: 0px;
 }
 
-.brand__icon {
-  font-size: 1.4rem;
+.brand__title {
+    margin: 15px 0px;
+    text-transform: uppercase;
 }
 
-.brand__link {
-  color: var(--dark);
+.brand:nth-of-type(1) .brand__title {
+    margin-top: 0px;
 }
 
 .brand__desc {
-  font-family: "Playfair Display Regular";
-  font-size: 1rem;
-  left: 50%;
-  margin: 0px;
-  position: absolute;
-  text-align: left;
-  text-transform: initial;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 95%;
+    font-family: "Playfair Display Regular";
+    font-size: 1rem;
+    left: 50%;
+    margin: 0px;
+    position: absolute;
+    text-align: left;
+    text-transform: initial;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
 }
 
-/* media queries */
-@media (min-width: 900px) {
-  .banner {
-    margin: -45px -35px;
-  }
+/* ===============
+  GENERAL STYLES
+  =============== */
 
-  .brands {
-    margin-top: 45px;
-  }
+.brand__btn {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
 
-  .brand__btn {
-    display: none;
-  }
+/* ===============
+  GENERAL CLASSES
+  =============== */
 
-  .wrap-vertical {
+.wrap-vertical {
     padding-bottom: 0px;
-  }
+}
+
+/* ===============
+  SALIENT FEATURES
+  =============== */
+
+.brand__icon {
+    font-size: 1.4rem;
+}
+
+.brand__link {
+    color: var(--dark);
+}
+
+/* ===============
+  ANIMATIONS
+  =============== */
+
+/* ===============
+  MEDIA QUERIES
+  =============== */
+
+@media (min-width: 900px) {
+    .banner {
+        margin: -45px -35px;
+    }
+    
+    .brands {
+        margin-top: 45px;
+    }
+    
+    .brand__btn {
+        display: none;
+    }
+    
+    .wrap-vertical {
+        padding-bottom: 0px;
+    }
 }
 
 @media (min-width: 1250px) {
-  .banner {
-    margin: -75px -65px;
-  }
-
-  .brands {
-    margin-top: 75px;
-    padding: 100px 0px;
-  }
+    .banner {
+        margin: -75px -65px;
+    }
+    
+    .brands {
+        margin-top: 75px;
+        padding: 100px 0px;
+    }
 }
