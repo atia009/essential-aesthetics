@@ -124,12 +124,6 @@
   SALIENT FEATURES
   =============== */
 
-/* .mission__img {
-    object-fit: cover;
-    height: 300px;
-    width: 100vw;
-} */
-
 .member__img {
     border-radius: 3px;
     object-fit: cover;
@@ -137,7 +131,6 @@
     height: 400px;
     width: 100%;
 }
-  
 
 /* ===============
   ANIMATIONS
