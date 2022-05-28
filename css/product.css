@@ -1,7 +1,7 @@
 /* CSS DIRECTORY
         1. =GLOBAL SETTINGS (imports)
         2. =PRIMARY LAYOUT (gallery, products)
-        3. =SECONDARY LAYOUT (ui)
+        3. =SECONDARY LAYOUT (banner, ui)
         4. =TERTIARY LAYOUT (product, recent)
         5. =TEXT RELATED (headings, paragraphs, lists)
         6. =GENERAL STYLES (buttons, forms)
@@ -28,7 +28,7 @@
     grid-template-columns: repeat(auto-fit, minmax(400px, max-content));
     margin: auto;
     max-width: 1450px;
-    padding: 40px 0px;
+    padding: 80px 0px;
     text-align: center;
 }
 
@@ -36,10 +36,15 @@
   SECONDARY LAYOUT
   =============== */
 
+.banner {
+    background-color: var(--primary);
+    padding: 40px 0px;
+    text-align: center;
+}
+
 .ui {
     display: flex;
     flex-wrap: wrap;
-    margin: -15px 0px 0px 0px;
 }
 
 .search-container {
@@ -94,6 +99,11 @@
 /* ===============
   TEXT RELATED
   =============== */
+
+.banner__title {
+    color: var(--lt);
+    font-size: 2rem;
+}
 
 .breadCrumbs {
     display: flex;
@@ -186,10 +196,6 @@
   GENERAL CLASSES
   =============== */
 
-.wrap-vertical {
-    padding-bottom: 0px;
-}
-
 .disable-scrolling {
     height: 100%;
     overflow: hidden;
@@ -250,17 +256,11 @@
   =============== */
 
 @media (min-width: 900px) {
-    .wrap-vertical {
-        padding-bottom: 0px;
+    .banner {
+        padding: 60px 0;
     }
-    
-    .ui {
-        margin: -45px 0px 0px 0px; 
-    }
-}
 
-@media (min-width: 1250px) {
-    .ui {
-        margin: -75px 0px 0px 0px;
+    .products {
+        padding: 100px 0;
     }
 }
