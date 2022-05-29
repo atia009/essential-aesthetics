@@ -95,13 +95,12 @@ SECONDARY LAYOUT
     box-shadow: 0 3px 5px rgba(57, 63, 72, 0.2);
     display: flex;
     justify-content: space-between;
-    padding-bottom: 10px;
-    padding-top: 10px;
+    padding: 5px 0;
 }
 
 .nav {
     display: flex;
-    flex-direction: column;
+    flex-flow: column nowrap;
 }
 
 .footer {
@@ -128,6 +127,11 @@ SECONDARY LAYOUT
   /* ===============
      TERTIARY LAYOUT
      =============== */
+
+  .logo {
+    align-items: center;
+    display: flex;
+  }
   
   /* ===============
      TEXT RELATED
@@ -186,15 +190,6 @@ SECONDARY LAYOUT
     font-size: 1.1rem;
     margin: 0px;
     text-transform: uppercase;
-  }
-
-  .logo__subtitle {
-    color: var(--dark);
-    font-family: "Playfair Display Regular";
-    font-size: .7rem;
-    margin: 0px;
-    text-transform: initial;
-    text-align: left;
   }
 
   .pages {
@@ -347,8 +342,7 @@ SECONDARY LAYOUT
     }
 
     .header {
-        padding-bottom: 20px;
-        padding-top: 20px;
+        padding: 10px 0;
     }
 
     .nav__btn {
