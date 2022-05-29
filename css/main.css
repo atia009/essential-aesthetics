@@ -22,6 +22,9 @@
     --lt: #fff;
     --primary: #9fbcbe;
     --secondary: #f8fbfa;
+    --dark-color: #557173;
+    --med-color: #9fbcbe;
+    --lt-color: #f0feff;
 }
   
 *:where(:not(img, svg, video):not(svg *, symbol *)) {
@@ -200,12 +203,6 @@ SECONDARY LAYOUT
     margin-bottom: 60px;
   }
 
-  .page__link {
-    font-family: "Josefin Sans Regular";
-    font-size: 2.1rem;
-    text-transform: uppercase;
-  }
-
   .foot-tab__item {
     font-family: "Josefin Sans Light";
     text-transform: initial;
@@ -283,6 +280,10 @@ SECONDARY LAYOUT
     top: 0;
     z-index: 5;
   }
+
+  .--page-link {
+    position: relative;
+  }
   
   /* ===============
      SALIENT FEATURES
@@ -301,6 +302,12 @@ SECONDARY LAYOUT
 
   i {
     color: var(--dark);
+  }
+
+  .page__link {
+    font-family: "Josefin Sans Regular";
+    font-size: 2.1rem;
+    text-transform: uppercase;
   }
 
   .foot-tab__link {
@@ -325,10 +332,6 @@ SECONDARY LAYOUT
   @media (min-width: 900px) {
     button:hover, i:hover {
         cursor: pointer;
-    }
-
-    .foot-tab__link:hover, .page__link:hover {
-        text-decoration: underline;
     }
 
     .wrap-horizontal {
@@ -380,6 +383,37 @@ SECONDARY LAYOUT
 
     .copyright {
         text-align: right;
+    }
+
+    .page__link:hover {
+      color:black;
+    }
+
+    .--page-link::before,
+    .--page-link::after {
+      border-radius: 3px;
+      bottom: -8.5px;
+      content: "";
+      height: 3px;
+      position: absolute;
+      right: 0;
+      width: 0;
+    }
+
+    .--page-link::before {
+      background-color: var(--dark-color);
+      transition: all 0.25s cubic-bezier(0.694, 0.048, 0.335, 1) 0.15s;
+    }
+
+    .--page-link::after {
+      background-color: var(--med-color);
+      transition: all 0.25s cubic-bezier(0.694, 0.048, 0.335, 1);
+    }
+
+    .--page-link:hover::before,
+    .--page-link:hover::after {
+      left: 0;
+      width: 100%;
     }
   }
   
