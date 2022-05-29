@@ -1,7 +1,7 @@
 // functions
 function loadHeader()
 {
- document.querySelector(".header").innerHTML = ` <a href="index.html" class="logo --page-link">
+ document.querySelector(".header").innerHTML = ` <a href="index.html" class="logo">
    <img class="logo__img" src="../images/logo.svg"></img>
    <h1 class="logo__title">Essential Aesthetics</h1>
   </a>
