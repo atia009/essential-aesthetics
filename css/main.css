@@ -34,7 +34,6 @@
 
 html {
     box-sizing: border-box;
-    font-family: "Playfair Display Regular";
     font-size: 16px;
     min-width: 375px;
 }
@@ -141,32 +140,12 @@ SECONDARY LAYOUT
      =============== */
 
   @font-face {
-    font-family: "Josefin Sans Regular";
-    src: url(../fonts/JosefinSans-Regular.ttf);
-  }
-  
-  @font-face {
-    font-family: "Josefin Sans Bold";
-    src: url(../fonts/JosefinSans-Bold.ttf);
-  }
-  
-  @font-face {
-    font-family: "Josefin Sans Light";
-    src: url(../fonts/JosefinSans-Light.ttf);
-  }
-  
-  @font-face {
-    font-family: "Playfair Display Regular";
-    src: url(../fonts/PlayfairDisplay-Regular.ttf);
+    font-family: "League Spartan";
+    src: url(../fonts/league-spartan-bold.woff2);
   }
   @font-face {
-    font-family: "Playfair Display SemiBold";
-    src: url(../fonts/PlayfairDisplay-SemiBold.ttf);
-  }
-  
-  @font-face {
-    font-family: "Playfair Display Bold";
-    src: url(../fonts/PlayfairDisplay-Bold.ttf);
+    font-family: "Futura";
+    src: url(../fonts/futura.woff);
   }
   
   h1,
@@ -174,18 +153,12 @@ SECONDARY LAYOUT
   h3, 
   h4, 
   h5 {
-    font-family: "Josefin Sans Bold";
+    font-family: "League Spartan", sans-serif;
     text-transform: uppercase;
   }
   
   p {
-    font-family: "Playfair Display Regular", serif;
-  }
-  
-  strong {
-    color: var(--lt-color);
-    font-family: "Playfair Display Regular", serif;
-    font-weight: 700;
+    font-family: "Futura", sans-serif;
   }
 
   .logo__title {
@@ -201,11 +174,6 @@ SECONDARY LAYOUT
 
   .page {
     margin-bottom: 60px;
-  }
-
-  .foot-tab__item {
-    font-family: "Josefin Sans Light";
-    text-transform: initial;
   }
 
   .foot-tab__title {
@@ -295,7 +263,7 @@ SECONDARY LAYOUT
 
   a {
     color: var(--lt);
-    font-family: "Josefin Sans Bold";
+    font-family: "League Spartan";
     text-decoration: none;
     text-transform: uppercase;
   }
@@ -305,13 +273,11 @@ SECONDARY LAYOUT
   }
 
   .page__link {
-    font-family: "Josefin Sans Regular";
     font-size: 2.1rem;
     text-transform: uppercase;
   }
 
   .foot-tab__link {
-    font-family: "Josefin Sans Light";
     text-transform: initial;
   }
 
