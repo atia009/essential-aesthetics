@@ -1,10 +1,10 @@
 // functions
 function loadHeader()
 {
- document.querySelector(".header").innerHTML = ` <div class="logo">
-   <a href="index.html" class="logo__link --page-link"><h1 class="logo__title">Essential Aesthetics</h1></a>
-   <a href="index.html" class="logo__link --page-link"><p class="logo__subtitle">By Essential Care Medical</p></a>
-  </div>
+ document.querySelector(".header").innerHTML = ` <a href="index.html" class="logo --page-link">
+   <img class="logo__img" src="../images/logo.svg"></img>
+   <h1 class="logo__title">Essential Aesthetics</h1>
+  </a>
   <nav class="nav">
    <button class="nav__btn"><i class="fas fa-bars nav__enter"></i></button>
    <ul class="pages hidden">
