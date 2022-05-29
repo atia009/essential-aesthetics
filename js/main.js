@@ -63,20 +63,7 @@ function loadFooter()
 function startLinkFunctionality() {
  const pages = Array.from(document.querySelectorAll(".--page-link"));
  const currentLink = document.URL;
- updateActive(pages, currentLink);
  updateLinks(pages, currentLink);
-}
-
-function updateActive(links, currentLink) {
-  links.forEach((link) => 
-  {
-   if (currentLink.includes(link.getAttribute(`href`))) {
-    link.classList.add("active");
-   }
-   else {
-    link.classList.remove("active");
-   }
-  })
 }
 
 function updateLinks(links, currentLink) {
