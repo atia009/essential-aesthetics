@@ -1,19 +1,19 @@
 // functions
 function loadHeader()
 {
- document.querySelector(".header").innerHTML = ` <a href="index.html" class="logo">
+ document.querySelector(".header").innerHTML = ` <a href="index.html" class="logo --page-link">
    <img class="logo__img" src="../images/logo.svg"></img>
    <h1 class="logo__title">Essential Aesthetics</h1>
   </a>
   <nav class="nav">
    <button class="nav__btn"><i class="fas fa-bars nav__enter"></i></button>
    <ul class="pages hidden">
-    <li class="page"><a href="index.html" class="page__link --page-link">Home</a></li>
-    <li class="page"><a href="about.html" class="page__link --page-link">About</a></li>
-    <li class="page"><a href="services.html" class="page__link --page-link">Services</a></li>
-    <li class="page"><a href="products.html" class="page__link --page-link">Products</a></li>
-    <li class="page"><a href="specials.html" class="page__link --page-link">Specials</a></li>
-    <li class="page"><a href="patient.html" class="page__link --page-link">Patient Resources</a></li>
+    <li class="page"><a href="index.html" class="page__link --page-link --link-animation">Home</a></li>
+    <li class="page"><a href="about.html" class="page__link --page-link --link-animation">About</a></li>
+    <li class="page"><a href="services.html" class="page__link --page-link --link-animation">Services</a></li>
+    <li class="page"><a href="products.html" class="page__link --page-link --link-animation">Products</a></li>
+    <li class="page"><a href="specials.html" class="page__link --page-link --link-animation">Specials</a></li>
+    <li class="page"><a href="patient.html" class="page__link --page-link --link-animation">Patient Resources</a></li>
    </ul>
   </nav>`
 }
@@ -39,12 +39,12 @@ function loadFooter()
   <div class="foot-tab">
    <h4 class="foot-tab__title">Quick Links</h4>
    <ul class="foot-tab__list">
-    <li class="foot-tab__item"><a href="index.html" class="foot-tab__link --page-link">Home</a></li> 
-    <li class="foot-tab__item"><a href="about.html" class="foot-tab__link --page-link">About</a></li> 
-    <li class="foot-tab__item"><a href="services.html" class="foot-tab__link --page-link">Services</a></li> 
-    <li class="foot-tab__item"><a href="products.html" class="foot-tab__link --page-link">Products</a></li> 
-    <li class="foot-tab__item"><a href="specials.html" class="foot-tab__link --page-link">Specials</a></li> 
-    <li class="foot-tab__item"><a href="patient.html" class="foot-tab__link --page-link">Patient Resources</a></li> 
+    <li class="foot-tab__item"><a href="index.html" class="foot-tab__link --page-link --link-animation">Home</a></li> 
+    <li class="foot-tab__item"><a href="about.html" class="foot-tab__link --page-link --link-animation">About</a></li> 
+    <li class="foot-tab__item"><a href="services.html" class="foot-tab__link --page-link --link-animation">Services</a></li> 
+    <li class="foot-tab__item"><a href="products.html" class="foot-tab__link --page-link --link-animation">Products</a></li> 
+    <li class="foot-tab__item"><a href="specials.html" class="foot-tab__link --page-link --link-animation">Specials</a></li> 
+    <li class="foot-tab__item"><a href="patient.html" class="foot-tab__link --page-link --link-animation">Patient Resources</a></li> 
    </ul>
   </div>
   <div class="foot-bottom">
