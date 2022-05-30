@@ -163,17 +163,10 @@ SECONDARY LAYOUT
 
   .logo__title {
     color: var(--dark);
-    font-size: 1.1rem;
+    font-size: .9rem;
+    letter-spacing: 2.4px;
     margin: 0px;
     text-transform: uppercase;
-  }
-
-  .pages {
-    margin: 0px;
-  }
-
-  .page {
-    margin-bottom: 60px;
   }
 
   .foot-tab__title {
@@ -226,10 +219,6 @@ SECONDARY LAYOUT
     padding-bottom: 15px;
     padding-top: 15px;
   }
-
-  .active {
-    font-family: "Josefin Sans Bold";
-  }
       
   .hidden {
     display: none;
@@ -273,7 +262,8 @@ SECONDARY LAYOUT
   }
 
   .page__link {
-    font-size: 2.1rem;
+    color: var(--dark);
+    font-size: .870rem;
     text-transform: uppercase;
   }
 
@@ -296,6 +286,15 @@ SECONDARY LAYOUT
      =============== */
   
   @media (min-width: 900px) {
+    .header {
+      padding-bottom: 10px;
+      padding-top: 10px;
+    }
+
+    .logo__title {
+      font-size: 1.05rem;
+    }
+
     button:hover, i:hover {
         cursor: pointer;
     }
@@ -310,25 +309,14 @@ SECONDARY LAYOUT
         padding-top: 45px;
     }
 
-    .header {
-        padding: 10px 0;
-    }
-
     .nav__btn {
         display: none;
     }
 
     .pages {
+        align-items: center;
         display: flex;
-    }
-
-    .page {
-        margin: 0px 0px 0px 15px;
-    }
-
-    .page__link {
-        color: var(--dark);
-        font-size: 1rem;
+        gap: 10px;
     }
 
     .foot-tab {
@@ -355,8 +343,8 @@ SECONDARY LAYOUT
       color:black;
     }
 
-    .--page-link::before,
-    .--page-link::after {
+    .--link-animation::before,
+    .--link-animation::after {
       border-radius: 3px;
       bottom: -8.5px;
       content: "";
@@ -366,24 +354,24 @@ SECONDARY LAYOUT
       width: 0;
     }
 
-    .--page-link::before {
+    .--link-animation::before {
       background-color: var(--dark-color);
-      transition: all 0.25s cubic-bezier(0.694, 0.048, 0.335, 1) 0.15s;
+      transition: all 0.30s cubic-bezier(0.694, 0.048, 0.335, 1) 0.15s;
     }
 
-    .--page-link::after {
+    .--link-animation::after {
       background-color: var(--med-color);
-      transition: all 0.25s cubic-bezier(0.694, 0.048, 0.335, 1);
+      transition: all 0.30s cubic-bezier(0.694, 0.048, 0.335, 1);
     }
 
-    .--page-link:hover::before,
-    .--page-link:hover::after {
+    .--link-animation:hover::before,
+    .--link-animation:hover::after {
       left: 0;
       width: 100%;
     }
   }
   
-  @media (min-width: 1050px) {
+  /* @media (min-width: 1050px) {
     .wrap-horizontal {
         padding-left: 65px;
         padding-right: 65px;
@@ -397,5 +385,5 @@ SECONDARY LAYOUT
     .foot-bottom {
         margin-top: 50px;
     }
-  }
+  } */
   
