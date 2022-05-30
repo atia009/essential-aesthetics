@@ -124,14 +124,12 @@
 
 .product__brand,
 .product__title {
-  font-family: "Josefin Sans Regular";
   font-size: 1rem;
   text-transform: uppercase;
   margin: 0px;
 }
 
 .product__price {
-    font-family: "Josefin Sans Light";
     font-size: 1rem;
     margin: 0px;
 }
@@ -215,7 +213,6 @@
 
 .breadCrumb__link {
     color: var(--dark);
-    font-family: "Playfair Display SemiBold";
     font-size: .9rem;
     text-transform: capitalize;
 }

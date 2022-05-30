@@ -8,7 +8,7 @@
         7. =GENERAL CLASSES (modifier classes)
         8. =SALIENT FEATURES (images, links, other important features)
         9. =ANIMATIONS
-        10.=MEDIA QUERIES (900px, 1250px) 
+        10.=MEDIA QUERIES (900px) 
 */
 
 /* ===============
@@ -90,13 +90,11 @@
 
 .special__subtitle {
     align-self: center;
-    font-family: "Josefin Sans Bold";
     grid-area: sti;
 }
 
 .special__body {
     align-self: center;
-    font-family: "Playfair Display SemiBold";
     font-size: 0.8rem;
     margin-left: 30px;
     grid-area: bdy;
