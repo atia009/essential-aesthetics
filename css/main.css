@@ -16,15 +16,11 @@
    =============== */
 
 :root {
-    --bg-color: #f3f3f3;
-    --dark: #555455;
-    --med: #a3a2a3;
-    --lt: #fff;
-    --primary: #9fbcbe;
-    --secondary: #f8fbfa;
-    --dark-color: #557173;
-    --med-color: #9fbcbe;
-    --lt-color: #f0feff;
+    --dark-color: #233e3d;
+    --med-color: #75b0af;
+    --lt-color: #d2e5e5;
+    --dark-neutral:#111f1e;
+    --lt-neutral: #f1f7f7;
 }
   
 *:where(:not(img, svg, video):not(svg *, symbol *)) {
@@ -75,7 +71,7 @@ img {
      =============== */
   
 body {
-    background-color: var(--lt);
+    background-color: var(--lt-neutral);
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -93,7 +89,7 @@ SECONDARY LAYOUT
 
 .header {
     align-items: center;
-    background-color: var(--lt);
+    background-color: var(--lt-neutral);
     box-shadow: 0 3px 5px rgba(57, 63, 72, 0.2);
     display: flex;
     justify-content: space-between;
@@ -107,8 +103,7 @@ SECONDARY LAYOUT
 
 .footer {
     align-items: center;
-    background-color: var(--primary);
-    color: var(--lt);
+    background-color: var(--lt-color);
     display: flex;
     flex-direction: column;
     padding-bottom: 20px;
@@ -162,7 +157,7 @@ SECONDARY LAYOUT
   }
 
   .logo__title {
-    color: var(--dark);
+    color: var(--dark-color);
     font-size: .9rem;
     letter-spacing: 2.4px;
     margin: 0px;
@@ -198,7 +193,7 @@ SECONDARY LAYOUT
   }
 
   select {
-    color: var(--dark);
+    color: var(--dark-color);
   }
 
   .nav__btn {
@@ -225,7 +220,7 @@ SECONDARY LAYOUT
   }
       
   .nav-invert {
-    background-color: var(--primary);
+    background-color: var(--lt-color);
     height: 100vh;
     margin: -20px -10px;
     padding: 15px 10px;
@@ -247,32 +242,33 @@ SECONDARY LAYOUT
      =============== */
   
   svg {
-    fill: var(--bg-color);
+    fill: var(--med-color);
   }
 
   a {
-    color: var(--lt);
+    color: var(--dark-color);
     font-family: "League Spartan";
     text-decoration: none;
     text-transform: uppercase;
   }
 
   i {
-    color: var(--dark);
+    color: var(--dark-color);
   }
 
   .page__link {
-    color: var(--dark);
+    color: var(--dark-color);
     font-size: .870rem;
     text-transform: uppercase;
   }
 
   .foot-tab__link {
+    color: var(--dark-color);
     text-transform: initial;
   }
 
   .social__icon {
-    color: var(--lt);
+    color: var(--dark-color);
     font-size: 1.8rem;
     margin: 0px 7.5px;
   }
@@ -343,10 +339,9 @@ SECONDARY LAYOUT
       color:black;
     }
 
-    .--link-animation::before,
-    .--link-animation::after {
+    .--link-animation::before {
       border-radius: 3px;
-      bottom: -8.5px;
+      bottom: -3px;
       content: "";
       height: 3px;
       position: absolute;
@@ -355,35 +350,20 @@ SECONDARY LAYOUT
     }
 
     .--link-animation::before {
-      background-color: var(--dark-color);
-      transition: all 0.30s cubic-bezier(0.694, 0.048, 0.335, 1) 0.15s;
-    }
-
-    .--link-animation::after {
       background-color: var(--med-color);
       transition: all 0.30s cubic-bezier(0.694, 0.048, 0.335, 1);
     }
 
-    .--link-animation:hover::before,
-    .--link-animation:hover::after {
+    .--link-animation:hover::before {
       left: 0;
       width: 100%;
     }
   }
   
-  /* @media (min-width: 1050px) {
-    .wrap-horizontal {
-        padding-left: 65px;
-        padding-right: 65px;
-    }
-    
+  @media (min-width: 1050px) {
     .wrap-vertical {
         padding-bottom: 75px;
         padding-top: 75px;
     }
-    
-    .foot-bottom {
-        margin-top: 50px;
-    }
-  } */
+  }
   
