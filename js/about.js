@@ -1,7 +1,7 @@
 // objects
 const missionObject =
 {
- title: "Our Mission",
+ title: "About",
  location: "Established 2020, Sed Libero, CA",
  src: "../images/about-mission.jpg",
  statement: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus perferendis vel deserunt? Consequuntur quisquam reiciendis doloremque vero nihil inventore vel necessitatibus, omnis possimus asperiores harum placeat quis. Cum, sequi quas.",

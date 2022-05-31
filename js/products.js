@@ -47,7 +47,7 @@ function loadBrands()
   return `<li class="brand">
          <h3 class="brand__title">${brand.title}</h3>
          <div class="brand__content" style="background-image: url(${brand.src})">
-         <button class="brand__btn"><i class="fas fa-info-circle brand__icon"></i></button>
+         <button class="brand__btn"></button>
           <a href="product.html" class="brand__link hidden">
             <span class="brand__overlay"> </span>
             <p class="brand__desc">${brand.desc}</p>

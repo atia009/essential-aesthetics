@@ -80,7 +80,6 @@ function loadFaqs()
  {
   return `<li class="faq">
         <h4 class="faq__question">${faq.question}</h4>
-        <i class="faq__icon fas fa-plus"></i>
         <p class="faq__inner faq__inner--${faq.id}">${faq.answer}</p>
         </li>`
  })

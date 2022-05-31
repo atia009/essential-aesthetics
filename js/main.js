@@ -6,7 +6,6 @@ function loadHeader()
    <h1 class="logo__title">Essential Aesthetics</h1>
   </a>
   <nav class="nav">
-   <button class="nav__btn"><i class="fas fa-bars nav__enter"></i></button>
    <ul class="pages hidden">
     <li class="page"><a href="index.html" class="page__link --page-link --link-animation">Home</a></li>
     <li class="page"><a href="about.html" class="page__link --page-link --link-animation">About</a></li>
@@ -49,9 +48,9 @@ function loadFooter()
   </div>
   <div class="foot-bottom">
     <ul class="social">
-      <a href="https://www.facebook.com/" target="_blank" class="social__link"><i class="fab fa-facebook-f social__icon"></i></a>
-      <a href="https://www.yelp.com/" target="_blank" class="social__link"><i class="fab fa-yelp social__icon"></i></a>
-      <a href="https://www.instagram.com/" target=_blank" class="social__link"><i class="fab fa-instagram social__icon"></i></a>
+      <a href="https://www.facebook.com/" target="_blank" class="social__link"></a>
+      <a href="https://www.yelp.com/" target="_blank" class="social__link"></a>
+      <a href="https://www.instagram.com/" target=_blank" class="social__link"></a>
     </ul>
     <div class="copyright">
       <p class="copyright__company">Essential Aesthetics</p>

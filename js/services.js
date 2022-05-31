@@ -1,7 +1,6 @@
 // objects
 const showcaseObject =
 {
- icon: "fas fa-angle-down",
  src: "../images/services-showcase.jpg",
  title: "Services",
 };
@@ -55,7 +54,6 @@ function loadShowcase()
 {
   showcase.innerHTML = `<h2 class="showcase__title">${showcaseObject.title}</h2>
                        <button class="showcase__btn">
-                        <i class="showcase__icon ${showcaseObject.icon}"></i>
                        </button>`
   showcase.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("${showcaseObject.src}")`;
 }
