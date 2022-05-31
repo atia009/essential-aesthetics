@@ -1,19 +1,37 @@
 // functions
 function loadHeader()
 {
- document.querySelector(".header").innerHTML = ` <a href="index.html" class="logo --page-link">
-   <img class="logo__img" src="../images/logo.svg"></img>
-   <h1 class="logo__title">Essential Aesthetics</h1>
+ document.querySelector(".header").innerHTML = `
+  <a href="index.html" class="logo --page-link">
+    <img class="logo__img" src="../images/logo.svg"></img>
+    <h1 class="logo__title">Essential Aesthetics</h1>
   </a>
   <nav class="nav">
-   <ul class="pages hidden">
-    <li class="page"><a href="index.html" class="page__link --page-link --link-animation">Home</a></li>
-    <li class="page"><a href="about.html" class="page__link --page-link --link-animation">About</a></li>
-    <li class="page"><a href="services.html" class="page__link --page-link --link-animation">Services</a></li>
-    <li class="page"><a href="products.html" class="page__link --page-link --link-animation">Products</a></li>
-    <li class="page"><a href="specials.html" class="page__link --page-link --link-animation">Specials</a></li>
-    <li class="page"><a href="patient.html" class="page__link --page-link --link-animation">Patient Resources</a></li>
-   </ul>
+    <div class="main-nav">
+      <span class="nav-enter">
+          <i class="nav-enter__bar"></i>
+      </span>
+      <ul class="pages">
+        <li class="page"><a href="index.html" class="page__link --page-link --link-animation">Home</a></li>
+        <li class="page"><a href="about.html" class="page__link --page-link --link-animation">About</a></li>
+        <li class="page"><a href="services.html" class="page__link --page-link --link-animation">Services</a></li>
+        <li class="page"><a href="products.html" class="page__link --page-link --link-animation">Products</a></li>
+        <li class="page"><a href="specials.html" class="page__link --page-link --link-animation">Specials</a></li>
+        <li class="page"><a href="patient.html" class="page__link --page-link --link-animation">Patient Resources</a></li>
+      </ul>
+    </div>
+    <div class="mobile-nav --hidden">
+      <span class="nav-exit">
+      </span>
+      <ul class="mobile-pages">
+          <li class="mobile-page"><a href="index.html" class="mobile-page__link --page-link">Home</a></li>     
+          <li class="mobile-page"><a href="about.html" class="mobile-page__link --page-link">About</a></li>     
+          <li class="mobile-page"><a href="services.html" class="mobile-page__link --page-link">Services</a></li>     
+          <li class="mobile-page"><a href="products.html" class="mobile-page__link --page-link">Products</a></li>     
+          <li class="mobile-page"><a href="specials.html" class="mobile-page__link --page-link">Specials</a></li>     
+          <li class="mobile-page"><a href="patient.html" class="mobile-page__link --page-link">Patient Resources</a></li>     
+      </ul>
+    </div>
   </nav>`
 }
 
