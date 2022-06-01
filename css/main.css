@@ -17,6 +17,7 @@
 
 :root {
     --dark-color: #233e3d;
+    --med-dark-color: #467c7b;
     --med-color: #75b0af;
     --lt-color: #d2e5e5;
     --dark-neutral:#111f1e;
@@ -66,9 +67,9 @@ img {
     -webkit-user-drag: element;
 }
   
-  /* ===============
-     PRIMARY LAYOUT
-     =============== */
+/* ===============
+   PRIMARY LAYOUT
+   =============== */
   
 body {
     background-color: var(--lt-neutral);
@@ -84,8 +85,8 @@ main {
 }
 
 /* ===============
-SECONDARY LAYOUT
-=============== */
+   SECONDARY LAYOUT
+   =============== */
 
 .header {
     align-items: center;
@@ -97,8 +98,32 @@ SECONDARY LAYOUT
 }
 
 .nav {
+  width: 100%;
+}
+
+.main-nav {
+    align-items: center;
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav-content {
+  background-color: var(--lt-neutral);
+  border-top: 1px solid var(--med-dark-color);
+  left: 0;
+  opacity: 0;
+  padding: 20px;
+  position: absolute;
+  top: -25px;
+  width: 100%;
+  z-index: 5;
+}
+
+.nav-content.--is-active {
+  opacity: 1;
+  transform: translateY(95px);
 }
 
 .footer {
@@ -121,249 +146,309 @@ SECONDARY LAYOUT
     text-align: center;
 }
   
-  /* ===============
-     TERTIARY LAYOUT
-     =============== */
+/* ===============
+   TERTIARY LAYOUT
+   =============== */
 
-  .logo {
-    align-items: center;
-    display: flex;
-  }
-  
-  /* ===============
-     TEXT RELATED
-     =============== */
+.logo {
+  align-items: center;
+  display: flex;
+}
 
-  @font-face {
-    font-family: "League Spartan";
-    src: url(../fonts/league-spartan-bold.woff2);
-  }
-  @font-face {
-    font-family: "Futura";
-    src: url(../fonts/futura.woff);
-  }
+/* ===============
+   TEXT RELATED
+   =============== */
+
+@font-face {
+  font-family: "League Spartan";
+  src: url(../fonts/league-spartan-bold.woff2);
+}
+@font-face {
+  font-family: "Futura";
+  src: url(../fonts/futura.woff);
+}
+
+h1,
+h2,
+h3, 
+h4, 
+h5 {
+  font-family: "League Spartan", sans-serif;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: "Futura", sans-serif;
+}
+
+.logo__title {
+  color: var(--dark-color);
+  font-size: .9rem;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+}
+
+.pages {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 20px 0;
+}
+
+.page {
+  width: 50%;
+}
+
+.foot-tab__title {
+  margin: 0px;
+  text-transform: uppercase;
+}
+
+.foot-tab__list {
+  margin: 5px 0px 0px 0px;
+}
+
+.social {
+  margin: 20px 0px;
+  text-align: center;
+}
+
+.copyright__company, .copyright__info {
+  margin: 0px;
+}
+
+/* ===============
+   GENERAL STYLES
+   =============== */
+
+button {
+  background-color: transparent;
+  border: none;
+  padding: 0px;
+}
+
+select {
+  color: var(--dark-color);
+}
+
+.nav-toggle {
+  display: block;
+  height: 20px;
+  position: relative;
+  width: 40px;
+  z-index: 10;
+}
+
+.nav-toggle__top, .nav-toggle__middle, .nav-toggle__bottom {
+  background-color: var(--dark-color);
+  border-radius: 3px;
+  height: 2px;
+  position: absolute;
+  width: 100%;
+}
+
+.nav-toggle__top {
+  left: 0;
+  top: 0;
+}
+
+.nav-toggle__middle {
+  left: 0;
+  top: calc(50% - 1px);
+}
+
+.nav-toggle__bottom {
+  bottom: 0;
+  left: 0;
+}
+
+.nav-toggle.--is-active .nav-toggle__top {
+  background-color: var(--med-color);
+  transform: rotate(45deg);
+  transform-origin: 25%;
+}
+
+.nav-toggle.--is-active .nav-toggle__middle {
+  opacity: 0;
+}
+
+.nav-toggle.--is-active .nav-toggle__bottom {
+  background-color: var(--med-color);
+  bottom: 4px;
+  transform: rotate(-45deg);
+  transform-origin: 25%;
+}
+
+.nav__btn {
+  font-size: 2rem;
+  text-align: right;
+}
+
+/* ===============
+   GENERAL CLASSES
+   =============== */
+
+.wrap-horizontal {
+  padding-left: 10px;
+  padding-right: 10px;
+}
   
-  h1,
-  h2,
-  h3, 
-  h4, 
-  h5 {
-    font-family: "League Spartan", sans-serif;
-    text-transform: uppercase;
-  }
-  
-  p {
-    font-family: "Futura", sans-serif;
+.wrap-vertical {
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.--page-link {
+  position: relative;
+}
+
+/* ===============
+   SALIENT FEATURES
+   =============== */
+
+svg {
+  fill: var(--med-color);
+}
+
+a {
+  color: var(--dark-color);
+  font-family: "League Spartan";
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+i {
+  color: var(--dark-color);
+}
+
+.page__link {
+  color: var(--dark-color);
+  font-size: .870rem;
+  text-transform: uppercase;
+}
+
+.foot-tab__link {
+  color: var(--dark-color);
+  text-transform: initial;
+}
+
+.social__icon {
+  color: var(--dark-color);
+  font-size: 1.8rem;
+  margin: 0px 7.5px;
+}
+
+/* ===============
+   ANIMATIONS
+   =============== */
+
+/* ===============
+   MEDIA QUERIES
+   =============== */
+
+@media (min-width: 900px) {
+  .header {
+    padding-bottom: 10px;
+    padding-top: 10px;
   }
 
   .logo__title {
-    color: var(--dark-color);
-    font-size: .9rem;
-    letter-spacing: 2.4px;
-    margin: 0px;
-    text-transform: uppercase;
+    font-size: 1.05rem;
   }
 
-  .foot-tab__title {
-    margin: 0px;
-    text-transform: uppercase;
+  button:hover, i:hover {
+      cursor: pointer;
   }
 
-  .foot-tab__list {
-    margin: 5px 0px 0px 0px;
+  .wrap-horizontal {
+      padding-left: 35px;
+      padding-right: 35px;
   }
-  
-  .social {
-    margin: 20px 0px;
-    text-align: center;
+      
+  .wrap-vertical {
+      padding-bottom: 45px;
+      padding-top: 45px;
   }
 
-  .copyright__company, .copyright__info {
-    margin: 0px;
+  .nav-toggle {
+    display: none;
   }
-  
-  /* ===============
-     GENERAL STYLES
-     =============== */
-  
-  button {
-    background-color: transparent;
+
+  .nav-content {
+    background-color: var(--lt-neutral);
     border: none;
-    padding: 0px;
+    opacity: 1;
+    padding: 0;
+    position: initial;
+    width: max-content;
   }
 
-  select {
-    color: var(--dark-color);
+  .pages {
+    flex-flow: row nowrap;
+    gap: 0 10px;
+  }
+
+  .page {
+    width: max-content;
   }
 
   .nav__btn {
-    font-size: 2rem;
-    text-align: right;
-  }
-  
-  /* ===============
-     GENERAL CLASSES
-     =============== */
-
-  .wrap-horizontal {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-    
-  .wrap-vertical {
-    padding-bottom: 15px;
-    padding-top: 15px;
-  }
-      
-  .hidden {
-    display: none;
-  }
-      
-  .nav-invert {
-    background-color: var(--lt-color);
-    height: 100vh;
-    margin: -20px -10px;
-    padding: 15px 10px;
-    width: 100vw;
+      display: none;
   }
 
-  .sticky {
-    position: sticky;
-    top: 0;
-    z-index: 5;
+  .foot-tab {
+      margin-top: 35px;
   }
 
-  .--page-link {
-    position: relative;
-  }
-  
-  /* ===============
-     SALIENT FEATURES
-     =============== */
-  
-  svg {
-    fill: var(--med-color);
-  }
-
-  a {
-    color: var(--dark-color);
-    font-family: "League Spartan";
-    text-decoration: none;
-    text-transform: uppercase;
-  }
-
-  i {
-    color: var(--dark-color);
-  }
-
-  .page__link {
-    color: var(--dark-color);
-    font-size: .870rem;
-    text-transform: uppercase;
-  }
-
-  .foot-tab__link {
-    color: var(--dark-color);
-    text-transform: initial;
-  }
-
-  .social__icon {
-    color: var(--dark-color);
-    font-size: 1.8rem;
-    margin: 0px 7.5px;
-  }
-  
-  /* ===============
-      ANIMATIONS
-     =============== */
-
-  /* ===============
-     MEDIA QUERIES
-     =============== */
-  
-  @media (min-width: 900px) {
-    .header {
-      padding-bottom: 10px;
-      padding-top: 10px;
-    }
-
-    .logo__title {
-      font-size: 1.05rem;
-    }
-
-    button:hover, i:hover {
-        cursor: pointer;
-    }
-
-    .wrap-horizontal {
-        padding-left: 35px;
-        padding-right: 35px;
-    }
-        
-    .wrap-vertical {
-        padding-bottom: 45px;
-        padding-top: 45px;
-    }
-
-    .nav__btn {
-        display: none;
-    }
-
-    .pages {
-        align-items: center;
-        display: flex;
-        gap: 10px;
-    }
-
-    .foot-tab {
-        margin-top: 35px;
-    }
-
-    .foot-bottom {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 70px;
-        width: 100%;
-    }
-
-    .copyright, .social {
-        align-self: flex-end;
-        margin: 0px;
-    }
-
-    .copyright {
-        text-align: right;
-    }
-
-    .page__link:hover {
-      color:black;
-    }
-
-    .--link-animation::before {
-      border-radius: 3px;
-      bottom: -3px;
-      content: "";
-      height: 3px;
-      position: absolute;
-      right: 0;
-      width: 0;
-    }
-
-    .--link-animation::before {
-      background-color: var(--med-color);
-      transition: all 0.30s cubic-bezier(0.694, 0.048, 0.335, 1);
-    }
-
-    .--link-animation:hover::before {
-      left: 0;
+  .foot-bottom {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 70px;
       width: 100%;
-    }
   }
-  
-  @media (min-width: 1050px) {
-    .wrap-vertical {
-        padding-bottom: 75px;
-        padding-top: 75px;
-    }
+
+  .copyright, .social {
+      align-self: flex-end;
+      margin: 0px;
   }
-  
+
+  .copyright {
+      text-align: right;
+  }
+
+  .page__link:hover {
+    color:black;
+  }
+
+  .--link-animation::before {
+    border-radius: 3px;
+    bottom: -3px;
+    content: "";
+    height: 3px;
+    position: absolute;
+    right: 0;
+    width: 0;
+  }
+
+  .--link-animation::before {
+    background-color: var(--med-color);
+    transition: all 0.30s cubic-bezier(0.694, 0.048, 0.335, 1);
+  }
+
+  .--link-animation:hover::before {
+    left: 0;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1050px) {
+  .wrap-vertical {
+      padding-bottom: 75px;
+      padding-top: 75px;
+  }
+}
