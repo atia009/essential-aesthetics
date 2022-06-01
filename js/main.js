@@ -1,36 +1,35 @@
 // functions
+function startWebsiteFunctionality() {
+  loadHeader();
+  loadFooter();
+  startLinkFunctionality();
+  startNavFunctionality();
+}
+
 function loadHeader()
 {
  document.querySelector(".header").innerHTML = `
-  <a href="index.html" class="logo --page-link">
-    <img class="logo__img" src="../images/logo.svg"></img>
-    <h1 class="logo__title">Essential Aesthetics</h1>
-  </a>
   <nav class="nav">
     <div class="main-nav">
-      <span class="nav-enter">
-          <i class="nav-enter__bar"></i>
-      </span>
-      <ul class="pages">
-        <li class="page"><a href="index.html" class="page__link --page-link --link-animation">Home</a></li>
-        <li class="page"><a href="about.html" class="page__link --page-link --link-animation">About</a></li>
-        <li class="page"><a href="services.html" class="page__link --page-link --link-animation">Services</a></li>
-        <li class="page"><a href="products.html" class="page__link --page-link --link-animation">Products</a></li>
-        <li class="page"><a href="specials.html" class="page__link --page-link --link-animation">Specials</a></li>
-        <li class="page"><a href="patient.html" class="page__link --page-link --link-animation">Patient Resources</a></li>
-      </ul>
-    </div>
-    <div class="mobile-nav --hidden">
-      <span class="nav-exit">
-      </span>
-      <ul class="mobile-pages">
-          <li class="mobile-page"><a href="index.html" class="mobile-page__link --page-link">Home</a></li>     
-          <li class="mobile-page"><a href="about.html" class="mobile-page__link --page-link">About</a></li>     
-          <li class="mobile-page"><a href="services.html" class="mobile-page__link --page-link">Services</a></li>     
-          <li class="mobile-page"><a href="products.html" class="mobile-page__link --page-link">Products</a></li>     
-          <li class="mobile-page"><a href="specials.html" class="mobile-page__link --page-link">Specials</a></li>     
-          <li class="mobile-page"><a href="patient.html" class="mobile-page__link --page-link">Patient Resources</a></li>     
-      </ul>
+      <a href="index.html" class="logo --page-link">
+        <img class="logo__img" src="../images/logo.svg"></img>
+        <h1 class="logo__title">Essential Aesthetics</h1>
+      </a>
+      <button class="nav-toggle">
+        <span class="nav-toggle__top"></span>
+        <span class="nav-toggle__middle"></span>
+        <span class="nav-toggle__bottom"></span>
+      </button>
+      <div class="nav-content">
+        <ul class="pages">
+          <li class="page"><a href="index.html" class="page__link --page-link --link-animation">Home</a></li>
+          <li class="page"><a href="about.html" class="page__link --page-link --link-animation">About</a></li>
+          <li class="page"><a href="services.html" class="page__link --page-link --link-animation">Services</a></li>
+          <li class="page"><a href="products.html" class="page__link --page-link --link-animation">Products</a></li>
+          <li class="page"><a href="specials.html" class="page__link --page-link --link-animation">Specials</a></li>
+          <li class="page"><a href="patient.html" class="page__link --page-link --link-animation">Patient Resources</a></li>
+        </ul>
+      </div>
     </div>
   </nav>`
 }
@@ -77,6 +76,30 @@ function loadFooter()
   </div>`
 }
 
+function startNavFunctionality() {
+  const navToggle = document.querySelector(`.nav-toggle`);
+  const pages = document.querySelectorAll(`.pages`);
+
+  navToggle.addEventListener(`click`, updateMobileNavVisibility);
+  pages.forEach(page => page.addEventListener(`click`, updateMobileNavVisibility));
+}
+
+function updateMobileNavVisibility() {
+  const navContent = document.querySelector(`.nav-content`);
+
+  updateToggleClass(navContent, `--is-active`);
+  updateToggleClass(this, `--is-active`);
+}
+
+function updateToggleClass(element, className) {
+  if (element.classList.contains(className)) {
+      element.classList.remove(className);
+  } else {
+      element.classList.add(className);
+  }
+}
+
+
 function startLinkFunctionality() {
  const pages = Array.from(document.querySelectorAll(".--page-link"));
  const currentLink = document.URL;
@@ -103,82 +126,4 @@ function updatePath(link, currentPath, homeDir, pagesDir) {
   }
 }
 
-
-function toggleNav() 
-{
- const navBtn = document.querySelector(".nav__btn");
- const nav = document.querySelector(".nav");
- const logo = document.querySelector(".logo");
- const pageList = document.querySelector(".pages");
- navBtn.addEventListener("click", function() 
- {
-  if (nav.classList.contains("toggleNav")) 
-  {
-   navBtn.innerHTML = `<i class="fas fa-bars nav__enter"></i>`;
-   hideNav(nav, logo, pageList);
-  }
-  else 
-  {
-   navBtn.innerHTML = `<i class="fas fa-times nav__exit" style="color: var(--lt)"></i>`;
-   showNav(nav, logo, pageList);
-  }
- })
-}
-
-function hideNav(nav, logo, pageList) 
-{
- nav.classList.remove("toggleNav");
- nav.classList.remove("nav-invert");
- pageList.classList.add("hidden");
- logo.classList.remove("hidden");
-}
-
-function showNav(nav, logo, pageList)
-{
-  nav.classList.add("toggleNav");
-  nav.classList.add("nav-invert");
-  pageList.classList.remove("hidden");
-  logo.classList.add("hidden");
-}
-
-function addBtnFunctionality()
-{;
-  const buttonOuterList = [...document.querySelectorAll(`.bg--hover`)].map(function(button) 
-  {
-    return button;
-  })
-  const buttonInnerList = buttonOuterList.map(function(button)
-  {
-    return button.firstElementChild;
-  })
-
-  for (let index = 0; index < buttonOuterList.length; index++)
-  {
-      addHoverFunctionality(buttonOuterList[index], buttonInnerList[index]);
-  }
-}
-
-function addHoverFunctionality(parentElement, childElement)
-{
- parentElement.addEventListener("mouseenter", () => swapColors(parentElement, childElement));
- parentElement.addEventListener("mouseleave", () => swapColors(parentElement, childElement));
-}
-
-function swapColors(parentElement, childElement)
-{
- const parentColor = window.getComputedStyle(parentElement).backgroundColor;
- const childColor = window.getComputedStyle(childElement).color;
- parentElement.style.backgroundColor = childColor;
- childElement.style.color = parentColor;      
-}
-
-
-// event listeners
-window.addEventListener("DOMContentLoaded", function() 
-{
- loadHeader();
- loadFooter();
- startLinkFunctionality();
- toggleNav();
- addBtnFunctionality();
-})
+window.addEventListener("DOMContentLoaded", startWebsiteFunctionality);
