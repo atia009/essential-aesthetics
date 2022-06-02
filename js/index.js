@@ -20,14 +20,6 @@ const cards = [
  },
 ]
 
-const bannerObject = 
-{
- title: "Call for Consultation",
- body: "To make an appointment with one of our dermatology specialists, please call us during business hours. Click the button below for more details.", 
- btnText: "Contact Us",
- btnLink: "#contact",
-};
-
 const showcaseObject =
 {
  title: "Welcome In",
@@ -36,24 +28,13 @@ const showcaseObject =
 
 // variables
 const main = document.querySelector(".main");
-const banner = document.querySelector(".banner");
 const showcase = document.querySelector(".showcase");
 
 // functions
 function loadHtml()
 {
- loadBanner();
  loadShowcase();
  loadCards();
-}
-
-function loadBanner()
-{
- banner.innerHTML = `<h3 class="banner__title">${bannerObject.title}</h3>
- <p class="banner__body">${bannerObject.body}</p>
- <button class="banner__btn bg--hover">
-  <a href="${bannerObject.btnLink}" class="banner__link">${bannerObject.btnText}</a>
- </button>`
 }
 
 function loadShowcase()
