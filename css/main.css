@@ -129,16 +129,29 @@ main {
 }
 
 .sub-nav {
+  align-items: center;
   background-color: var(--lt-color);
   border-top: 1px solid var(--med-dark-color);
   box-shadow: 0 3px 10px -6px var(--border-color);
-  padding: 15px 10px;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 12.5px;
+  opacity: 1;
+  padding-bottom: 15px;
+  padding-top: 15px;
   width: 100%;
 }
 
+.sub-nav.--is-close {
+  opacity: 0;
+  transform: translateY(-141px);
+}
+
 .sub-nav.--is-active {
+  opacity: 1;
   transform: translateY(141px);
 }
+
 
 .footer {
   align-items: center;
@@ -167,6 +180,7 @@ main {
 .logo {
   align-items: center;
   display: flex;
+  z-index: 10;
 }
 
 /* ===============
@@ -252,15 +266,29 @@ select {
   color: var(--dark-color);
 }
 
-.nav-toggle {
+.nav-toggle, .sub-toggle {
   display: block;
-  height: 20px;
   position: relative;
-  width: 40px;
   z-index: 10;
 }
 
-.nav-toggle__top, .nav-toggle__middle, .nav-toggle__bottom {
+.nav-toggle {
+  height: 20px;
+  width: 40px;
+}
+
+.sub-toggle {
+  align-self: flex-end;
+  height: 10px;
+  opacity: 1;
+  width: 20px;
+}
+
+.sub-toggle.--is-active {
+  opacity: 0;
+}
+
+.nav-toggle__top, .nav-toggle__middle, .nav-toggle__bottom, .sub-toggle__left, .sub-toggle__right {
   background-color: var(--dark-color);
   border-radius: 3px;
   height: 2px;
@@ -268,7 +296,7 @@ select {
   width: 100%;
 }
 
-.nav-toggle__top {
+.nav-toggle__top, .sub-toggle__left {
   left: 0;
   top: 0;
 }
@@ -278,12 +306,12 @@ select {
   top: calc(50% - 1px);
 }
 
-.nav-toggle__bottom {
+.nav-toggle__bottom, .sub-toggle__right {
   bottom: 0;
   left: 0;
 }
 
-.nav-toggle.--is-active .nav-toggle__top {
+.nav-toggle.--is-active .nav-toggle__top, .sub-toggle__left {
   background-color: var(--med-color);
   transform: rotate(45deg);
   transform-origin: 25%;
@@ -293,11 +321,18 @@ select {
   opacity: 0;
 }
 
-.nav-toggle.--is-active .nav-toggle__bottom {
+.nav-toggle.--is-active .nav-toggle__bottom, .sub-toggle__right {
   background-color: var(--med-color);
-  bottom: 4px;
   transform: rotate(-45deg);
   transform-origin: 25%;
+}
+
+.nav-toggle.--is-active .nav-toggle__bottom {
+  bottom: 4px;
+}
+
+.sub-toggle__right {
+  bottom: 1px;
 }
 
 .sub-nav__btn {
@@ -305,7 +340,6 @@ select {
   border-radius: 3px;
   color: var(--lt-neutral);
   font-size: .770rem;
-  margin-top: 10px;
   padding: 10px 20px;
 }
 
