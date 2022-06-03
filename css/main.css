@@ -16,6 +16,7 @@
    =============== */
 
 :root {
+    --border-color: rgba(17, 31, 30, .52);
     --dark-color: #233e3d;
     --med-dark-color: #467c7b;
     --med-color: #75b0af;
@@ -90,11 +91,8 @@ main {
 
 .header {
     align-items: center;
-    background-color: var(--lt-neutral);
-    box-shadow: 0 3px 5px rgba(57, 63, 72, 0.2);
     display: flex;
     justify-content: space-between;
-    padding: 5px 0;
 }
 
 .nav {
@@ -102,11 +100,15 @@ main {
 }
 
 .main-nav {
-    align-items: center;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    width: 100%;
+  align-items: center;
+  background-color: var(--lt-neutral);
+  box-shadow: 0 3px 5px var(--border-color);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 100%;
 }
 
 .nav-content {
@@ -126,24 +128,36 @@ main {
   transform: translateY(95px);
 }
 
+.sub-nav {
+  background-color: var(--lt-color);
+  border-top: 1px solid var(--med-dark-color);
+  box-shadow: 0 3px 10px -6px var(--border-color);
+  padding: 15px 10px;
+  width: 100%;
+}
+
+.sub-nav.--is-active {
+  transform: translateY(141px);
+}
+
 .footer {
-    align-items: center;
-    background-color: var(--lt-color);
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 20px;
-    padding-top: 20px;
+  align-items: center;
+  background-color: var(--lt-color);
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 
 .foot-tab {
-    margin: 20px 0px 0px 0px;
-    text-align: center;
+  margin: 20px 0px 0px 0px;
+  text-align: center;
 }
 
 .copyright {
-    font-size: .7rem;
-    margin-bottom: 20px;
-    text-align: center;
+  font-size: .7rem;
+  margin-bottom: 20px;
+  text-align: center;
 }
   
 /* ===============
@@ -173,11 +187,13 @@ h2,
 h3, 
 h4, 
 h5 {
+  color: var(--dark-color);
   font-family: "League Spartan", sans-serif;
   text-transform: uppercase;
 }
 
 p {
+  color: var(--dark-color);
   font-family: "Futura", sans-serif;
 }
 
@@ -196,6 +212,11 @@ p {
 
 .page {
   width: 50%;
+}
+
+.sub-nav__message {
+  font-family: "League Spartan", sans-serif;
+  font-size: .87rem;
 }
 
 .foot-tab__title {
@@ -223,6 +244,7 @@ p {
 button {
   background-color: transparent;
   border: none;
+  cursor: pointer;
   padding: 0px;
 }
 
@@ -278,9 +300,13 @@ select {
   transform-origin: 25%;
 }
 
-.nav__btn {
-  font-size: 2rem;
-  text-align: right;
+.sub-nav__btn {
+  background-color: var(--med-color);
+  border-radius: 3px;
+  color: var(--lt-neutral);
+  font-size: .770rem;
+  margin-top: 10px;
+  padding: 10px 20px;
 }
 
 /* ===============
@@ -352,7 +378,7 @@ i {
    =============== */
 
 @media (min-width: 900px) {
-  .header {
+  .main-nav {
     padding-bottom: 10px;
     padding-top: 10px;
   }
@@ -388,6 +414,18 @@ i {
     width: max-content;
   }
 
+  .nav-content.--is-active {
+    transform: translateY(0px);
+  }
+
+  .sub-nav {
+    border-top: none;
+  }
+
+  .sub-nav.--is-active {
+    transform: translateY(0px);
+  }
+
   .pages {
     flex-flow: row nowrap;
     gap: 0 10px;
@@ -395,10 +433,6 @@ i {
 
   .page {
     width: max-content;
-  }
-
-  .nav__btn {
-      display: none;
   }
 
   .foot-tab {
