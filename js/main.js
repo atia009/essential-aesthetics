@@ -10,7 +10,7 @@ function loadHeader()
 {
  document.querySelector(".header").innerHTML = `
   <nav class="nav">
-    <div class="main-nav">
+    <div class="main-nav wrap-horizontal">
       <a href="index.html" class="logo --page-link">
         <img class="logo__img" src="../images/logo.svg"></img>
         <h1 class="logo__title">Essential Aesthetics</h1>
@@ -30,6 +30,10 @@ function loadHeader()
           <li class="page"><a href="patient.html" class="page__link --page-link --link-animation">Patient Resources</a></li>
         </ul>
       </div>
+    </div>
+    <div class="sub-nav">
+      <p class="sub-nav__message">To make an appointment with one of our dermatology specialists, please call us during business hours.</p>
+      <a href="#bottom" class="sub-nav__link"><button class="sub-nav__btn">Contact Info</button></a>
     </div>
   </nav>`
 }
@@ -86,8 +90,10 @@ function startNavFunctionality() {
 
 function updateMobileNavVisibility() {
   const navContent = document.querySelector(`.nav-content`);
+  const subNav = document.querySelector(`.sub-nav`);
 
   updateToggleClass(navContent, `--is-active`);
+  updateToggleClass(subNav, `--is-active`);
   updateToggleClass(this, `--is-active`);
 }
 
