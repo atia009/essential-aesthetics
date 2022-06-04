@@ -10,6 +10,9 @@ function loadHeader()
 {
  document.querySelector(".header").innerHTML = `
   <nav class="nav">
+    <div class="sub-nav wrap-horizontal">
+      <p class="sub-nav__message"><strong class="sub-nav__strong">Now Taking Appointments!</strong> Please call us during business hours. <a href="#contact" class="sub-nav__link">Contact Info</a></p>
+    </div>
     <div class="main-nav wrap-horizontal">
       <a href="index.html" class="logo --page-link">
         <img class="logo__img" src="../images/logo.svg"></img>
@@ -30,14 +33,6 @@ function loadHeader()
           <li class="page"><a href="patient.html" class="page__link --page-link --link-animation">Patient Resources</a></li>
         </ul>
       </div>
-    </div>
-    <div class="sub-nav wrap-horizontal">
-      <button class="sub-toggle">
-        <span class="sub-toggle__left"></span>
-        <span class="sub-toggle__right"></span>
-      </button>
-      <p class="sub-nav__message">To make an appointment with one of our dermatology specialists, please call us during business hours.</p>
-      <a href="#bottom" class="sub-nav__link"><button class="sub-nav__btn">Contact Info</button></a>
     </div>
   </nav>`
 }
@@ -86,27 +81,15 @@ function loadFooter()
 
 function startNavFunctionality() {
   const navToggle = document.querySelector(`.nav-toggle`);
-  const subToggle = document.querySelector(`.sub-toggle`);
 
   navToggle.addEventListener(`click`, updateMobileNavVisibility);
-  subToggle.addEventListener(`click`, updateSubNavVisibility);
 }
 
 function updateMobileNavVisibility() {
   const navContent = document.querySelector(`.nav-content`);
-  const subContent = document.querySelector(`.sub-nav`);
-  const subToggle = document.querySelector(`.sub-toggle`);
 
   updateToggleClass(navContent, `--is-active`);
-  updateToggleClass(subContent, `--is-active`);
-  updateToggleClass(subToggle, `--is-active`);
   updateToggleClass(this, `--is-active`);
-}
-
-function updateSubNavVisibility() {
-  const subContent = document.querySelector(`.sub-nav`);
-
-  updateToggleClass(subContent, `--is-close`);
 }
 
 function updateToggleClass(element, className) {
