@@ -143,9 +143,9 @@ main {
   align-items: center;
   background-color: var(--lt-color);
   display: flex;
-  flex-direction: column;
-  padding-bottom: 20px;
-  padding-top: 20px;
+  flex-flow: column nowrap;
+  gap: 15px;
+  height: 245px;
 }
 
 .foot-tab {
@@ -198,9 +198,9 @@ p {
 }
 
 .logo__title {
-  color: var(--dark-color);
+  color: var(--med-color);
   font-size: .9rem;
-  letter-spacing: 2.4px;
+  letter-spacing: 2px;
   text-transform: uppercase;
 }
 
@@ -216,7 +216,7 @@ p {
 
 .sub-nav__message {
   font-family: "League Spartan", sans-serif;
-  font-size: .87rem;
+  font-size: .75rem;
   color: var(--opaque-lt-color);
 }
 
@@ -224,22 +224,34 @@ p {
   color: var(--lt-neutral);
 }
 
-.foot-tab__title {
-  margin: 0px;
-  text-transform: uppercase;
+.foot-pages, .foot-socials, .info {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 
-.foot-tab__list {
-  margin: 5px 0px 0px 0px;
+.foot-pages {
+  margin-top: 35px;
+  gap: 5px 20px;
 }
 
-.social {
-  margin: 20px 0px;
-  text-align: center;
+.foot-socials {
+  gap: 0px 24px;
 }
 
-.copyright__company, .copyright__info {
-  margin: 0px;
+.foot-page__link, .info__item {
+  font-size: .75rem;
+}
+
+.info__item {
+  color: var(--dark-color);
+  font-family: "Futura", sans-serif;
+  margin-bottom: 5px;
+  padding: 0 10px;
+}
+
+.info__item:not(:nth-of-type(1)) {
+  border-left: 1px solid var(--border-color);
 }
 
 /* ===============
@@ -337,6 +349,7 @@ svg {
 a {
   color: var(--dark-color);
   font-family: "League Spartan";
+  letter-spacing: 2px;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -347,25 +360,20 @@ i {
 
 .sub-nav__link {
   color: var(--opaque-lt-color);
+  letter-spacing: initial;
   text-decoration: underline;
   text-transform: initial;
 }
 
 .page__link {
   color: var(--dark-color);
-  font-size: .870rem;
+  font-size: .75rem;
   text-transform: uppercase;
 }
 
-.foot-tab__link {
-  color: var(--dark-color);
-  text-transform: initial;
-}
-
-.social__icon {
-  color: var(--dark-color);
-  font-size: 1.8rem;
-  margin: 0px 7.5px;
+.foot-social__svg {
+  height: 20px;
+  width: 20px;
 }
 
 /* ===============
@@ -383,7 +391,7 @@ i {
   }
 
   .logo__title {
-    font-size: 1.05rem;
+    font-size: 1rem;
   }
 
   button:hover, i:hover {
@@ -427,28 +435,22 @@ i {
     width: max-content;
   }
 
-  .foot-tab {
-      margin-top: 35px;
+  .foot-pages {
+    gap: 5px 34px;
+    margin-top: 55px;
   }
 
-  .foot-bottom {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 70px;
-      width: 100%;
+  .foot-socials {
+    gap: 0px 50px;
   }
 
-  .copyright, .social {
-      align-self: flex-end;
-      margin: 0px;
+  .foot-page__link {
+    font-size: .875rem;
   }
 
-  .copyright {
-      text-align: right;
-  }
-
-  .page__link:hover {
-    color:black;
+  .foot-social__svg {
+    height: 32.5px;
+    width: 32.5px;
   }
 
   .--link-animation::before {
@@ -476,5 +478,13 @@ i {
   .wrap-vertical {
       padding-bottom: 75px;
       padding-top: 75px;
+  }
+
+  .pages {
+    gap: 0 14px;
+  }
+
+  .page__link {
+    font-size: 0.875rem;
   }
 }
