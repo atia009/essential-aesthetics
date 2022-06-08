@@ -8,7 +8,7 @@
         7. =GENERAL CLASSES (modifier classes)
         8. =SALIENT FEATURES (images, links, other important features)
         9. =ANIMATIONS
-        10.=MEDIA QUERIES (900px, 1050px) 
+        10.=MEDIA QUERIES (900px, 1025px, 1200px) 
 */
 
 /* ===============
@@ -100,19 +100,17 @@ main {
 }
 
 .nav {
+  background-color: var(--lt-neutral);
+  box-shadow: 0 3px 5px var(--border-color);
   width: 100%;
 }
 
 .main-nav {
   align-items: center;
-  background-color: var(--lt-neutral);
-  box-shadow: 0 3px 5px var(--border-color);
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  width: 100%;
+  margin: 5px auto;
 }
 
 .nav-content {
@@ -122,7 +120,7 @@ main {
   opacity: 0;
   padding: 20px;
   position: absolute;
-  top: -25px;
+  top: -42px;
   width: 100%;
   z-index: 5;
 }
@@ -140,12 +138,16 @@ main {
 }
 
 .footer {
-  align-items: center;
   background-color: var(--lt-color);
+  height: 245px;
+}
+
+.foot-content {
+  align-items: center;
   display: flex;
   flex-flow: column nowrap;
   gap: 15px;
-  height: 245px;
+  margin: auto;
 }
 
 .foot-tab {
@@ -324,12 +326,11 @@ select {
    GENERAL CLASSES
    =============== */
 
-.wrap-horizontal {
-  padding-left: 10px;
-  padding-right: 10px;
+.--wrap-horizontal {
+  width: 95%
 }
   
-.wrap-vertical {
+.--wrap-vertical {
   padding-bottom: 15px;
   padding-top: 15px;
 }
@@ -393,17 +394,8 @@ i {
   .logo__title {
     font-size: 1rem;
   }
-
-  button:hover, i:hover {
-      cursor: pointer;
-  }
-
-  .wrap-horizontal {
-      padding-left: 35px;
-      padding-right: 35px;
-  }
       
-  .wrap-vertical {
+  .--wrap-vertical {
       padding-bottom: 45px;
       padding-top: 45px;
   }
@@ -433,6 +425,10 @@ i {
 
   .page {
     width: max-content;
+  }
+
+  .foot-content {
+    gap: 30px;
   }
 
   .foot-pages {
@@ -474,8 +470,12 @@ i {
   }
 }
 
-@media (min-width: 1050px) {
-  .wrap-vertical {
+@media (min-width: 1025px) {
+  .--wrap-horizontal {
+    width: 1000px;
+  }
+
+  .--wrap-vertical {
       padding-bottom: 75px;
       padding-top: 75px;
   }
@@ -486,5 +486,11 @@ i {
 
   .page__link {
     font-size: 0.875rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .--wrap-horizontal {
+    width: 1170px;
   }
 }
