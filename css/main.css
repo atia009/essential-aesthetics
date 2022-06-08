@@ -2,7 +2,7 @@
         1. =GLOBAL SETTINGS (variables, resets)
         2. =PRIMARY LAYOUT (body, main)
         3. =SECONDARY LAYOUT (header, footer, sidebar)
-        4. =TERTIARY LAYOUT (section)
+        4. =TERTIARY LAYOUT (logo)
         5. =TEXT RELATED (headings, paragraphs, lists)
         6. =GENERAL STYLES (buttons, forms)
         7. =GENERAL CLASSES (modifier classes)
@@ -34,7 +34,7 @@
 html {
     box-sizing: border-box;
     font-size: 16px;
-    min-width: 375px;
+    min-width: 390px;
 }
 
 *,
@@ -94,9 +94,10 @@ main {
     align-items: center;
     display: flex;
     justify-content: space-between;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 5;
+    width: 100%;
 }
 
 .nav {
@@ -171,6 +172,7 @@ main {
   z-index: 10;
 }
 
+
 /* ===============
    TEXT RELATED
    =============== */
@@ -191,6 +193,7 @@ h4,
 h5 {
   color: var(--dark-color);
   font-family: "League Spartan", sans-serif;
+  letter-spacing: 2px;
   text-transform: uppercase;
 }
 
@@ -202,7 +205,6 @@ p {
 .logo__title {
   color: var(--med-color);
   font-size: .9rem;
-  letter-spacing: 2px;
   text-transform: uppercase;
 }
 
@@ -484,8 +486,8 @@ i {
     gap: 0 14px;
   }
 
-  .page__link {
-    font-size: 0.875rem;
+  .page__link, .sub-nav__message {
+    font-size: .875rem;
   }
 }
 
