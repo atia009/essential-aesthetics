@@ -55,7 +55,7 @@ function loadShowcase()
   showcase.innerHTML = `<h2 class="showcase__title">${showcaseObject.title}</h2>
                        <button class="showcase__btn">
                        </button>`
-  showcase.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("${showcaseObject.src}")`;
+  showcase.style.backgroundImage = `linear-gradient(rgba(8, 15, 15, .6), rgba(8, 15, 15, .6)), url("${showcaseObject.src}")`;
 }
 
 function loadServices()
