@@ -1,9 +1,13 @@
 // objects
+const showcaseObject = {
+ title: "About",
+ src: "../images/about-mission.jpg",
+}
+
 const missionObject =
 {
- title: "About",
+ title: "Our Mission",
  location: "Established 2020, Sed Libero, CA",
- src: "../images/about-mission.jpg",
  statement: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus perferendis vel deserunt? Consequuntur quisquam reiciendis doloremque vero nihil inventore vel necessitatibus, omnis possimus asperiores harum placeat quis. Cum, sequi quas.",
 }
 
@@ -25,24 +29,29 @@ const members = [
 ]
 
 // variables
+const showcase = document.querySelector(".showcase");
 const mission = document.querySelector(".mission");
 const team = document.querySelector(".team");
 
 // functions
 function loadHtml()
 {
+ loadShowcase();
  loadMission();
  loadTeam();
 }
 
+function loadShowcase()
+{
+ showcase.innerHTML = `<h1 class="showcase__title">${showcaseObject.title}</h1>`;
+ showcase.style.backgroundImage = `linear-gradient(rgba(8, 15, 15, .6), rgba(8, 15, 15, .6)), url("${showcaseObject.src}")`;
+}
+
 function loadMission()
 {
- mission.innerHTML = `<div class="mission-container">
-    <h2 class="mission__title">${missionObject.title}</h2>
- </div>
+ mission.innerHTML = `<h2 class="mission__title">${missionObject.title}</h2>
  <p class="mission__subtitle">${missionObject.location}</p>
  <p class="mission__body">${missionObject.statement}</p>`
- document.querySelector(`.mission-container`).style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("${missionObject.src}")`;
 }
 
 function loadTeam()
