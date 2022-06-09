@@ -48,14 +48,6 @@
   SECONDARY LAYOUT
   =============== */
 
-.showcase {
-    background-position: center;
-    background-size: cover;
-    height: 300px;
-    position: relative;
-    width: 100%;
-}
-
 /* ===============
   TERTIARY LAYOUT
   =============== */
@@ -63,16 +55,6 @@
 /* ===============
   TEXT RELATED
   =============== */
-
-.showcase__title {
-    color: var(--lt);
-    font-size: 2rem;
-    left: 50%;
-    position: absolute;
-    text-transform: uppercase;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
 
 .service__title {
     font-size: 1.10rem;
@@ -131,10 +113,6 @@
   =============== */
 
 @media (min-width: 900px) {
-    .showcase {
-      height: 500px;
-    }
-
     .services {
       grid-gap: 60px;
       margin: 60px auto;
