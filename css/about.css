@@ -71,17 +71,6 @@
   TEXT RELATED
   =============== */
 
-.mission__title {
-    font-size: 2rem;
-    color: var(--lt);
-    position: absolute;
-    left: 50%;
-    text-transform: uppercase;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    z-index: 3;
-}
-
 .mission__subtitle {
     font-size: 0.7rem;
     margin: 20px 0 0;
