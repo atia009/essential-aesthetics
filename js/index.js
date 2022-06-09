@@ -40,7 +40,7 @@ function loadHtml()
 function loadShowcase()
 {
  showcase.innerHTML = `<h1 class="showcase__title">${showcaseObject.title}</h1>`;
- showcase.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("${showcaseObject.src}")`;
+ showcase.style.backgroundImage = `linear-gradient(rgba(8, 15, 15, .6), rgba(8, 15, 15, .6)), url("${showcaseObject.src}")`;
 }
 
 function loadCards()
