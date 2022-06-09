@@ -2,7 +2,7 @@
         1. =GLOBAL SETTINGS (variables, resets)
         2. =PRIMARY LAYOUT (body, main)
         3. =SECONDARY LAYOUT (header, footer, sidebar)
-        4. =TERTIARY LAYOUT (logo)
+        4. =TERTIARY LAYOUT (logo, showcase)
         5. =TEXT RELATED (headings, paragraphs, lists)
         6. =GENERAL STYLES (buttons, forms)
         7. =GENERAL CLASSES (modifier classes)
@@ -172,6 +172,13 @@ main {
   z-index: 10;
 }
 
+.showcase {
+  align-items: center;
+  display: flex;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
 
 /* ===============
    TEXT RELATED
@@ -205,7 +212,6 @@ p {
 .logo__title {
   color: var(--med-color);
   font-size: .9rem;
-  text-transform: uppercase;
 }
 
 .pages {
@@ -256,6 +262,13 @@ p {
 
 .info__item:not(:nth-of-type(1)) {
   border-left: 1px solid var(--border-color);
+}
+
+.showcase__title {
+  color: var(--lt-neutral);
+  font-size: 2.5rem;
+  letter-spacing: 6px;
+  margin: 0 auto;
 }
 
 /* ===============
@@ -355,10 +368,6 @@ a {
   letter-spacing: 2px;
   text-decoration: none;
   text-transform: uppercase;
-}
-
-i {
-  color: var(--dark-color);
 }
 
 .sub-nav__link {
@@ -480,6 +489,10 @@ i {
   .--wrap-vertical {
       padding-bottom: 75px;
       padding-top: 75px;
+  }
+
+  .showcase__title {
+    font-size: 3.5rem;
   }
 
   .pages {
