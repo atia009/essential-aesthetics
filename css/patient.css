@@ -33,7 +33,7 @@
   =============== */
 
 .resources {
-    background-color: var(--primary);
+    background-color: var(--med-color);
     margin: -15px -10px;
     padding: 65px 0px;
     text-align: center;
@@ -55,7 +55,7 @@
 }
 
 .faq:not(:nth-of-type(1)) {
-    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    border-top: 1px solid var(--dark-color);
     margin-top: 10px;
     padding-top: 10px;
 }
@@ -65,7 +65,7 @@
   =============== */
 
 .resources__title {
-    color: var(--lt);
+    color: var(--lt-color);
     text-transform: uppercase;
     margin: 0px 0px 40px 0px;
 }
@@ -94,9 +94,9 @@
   =============== */
 
 .pdf {
-    background-color: var(--lt);
+    background-color: var(--lt-color);
     border-radius: 10px;
-    box-shadow: 0px 4px 8px -4px var(--dark);
+    box-shadow: 0px 4px 8px -4px var(--dark-color);
     padding: 7.5px 0px;
     width: 300px;
 }
@@ -114,7 +114,7 @@
   =============== */
 
 .pdf__link {
-    color: var(--primary);
+    color: var(--med-color);
     font-size: 1rem;
     text-transform: uppercase;
 }

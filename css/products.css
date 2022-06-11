@@ -22,7 +22,7 @@
   =============== */
 
 .banner {
-    background-color: var(--primary);
+    background-color: var(--med-color);
     padding: 40px 0px;
     text-align: center;
 }
@@ -53,7 +53,7 @@
 }
 
 .brand__overlay {
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: var(--opaque-lt-color);
     display: block;
     height: 100%;
     width: 100%;
@@ -68,7 +68,7 @@
   =============== */
 
 .banner__title {
-    color: var(--lt);
+    color: var(--lt-neutral);
     font-size: 2rem;
 }
 
@@ -116,7 +116,7 @@
 }
 
 .brand__link {
-    color: var(--dark);
+    color: var(--dark-color);
 }
 
 /* ===============

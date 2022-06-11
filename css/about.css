@@ -28,16 +28,16 @@
 }
 
 .team__divider {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: var(--dark-color);
     height: 1px;
     max-width: 600px;
     width: 85%;
 }
   
 .member {
-    background-color: var(--secondary);
+    background-color: var(--lt-color);
     border-radius: 3px;
-    box-shadow: 0 10px 60px -20px rgba(0, 0, 0, 0.45);
+    box-shadow: 0 10px 60px -20px var(--shadow-color);
     margin-top: 40px;
     max-width: 600px;
     width: 85%;
@@ -82,7 +82,7 @@
 }
 
 .member__title {
-    border-bottom: 1px solid var(--primary);
+    border-bottom: 1px solid var(--med-color);
     margin: 0px;
     padding: 10px 0px;
     text-transform: initial;

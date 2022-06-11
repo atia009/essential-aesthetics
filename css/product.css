@@ -37,7 +37,7 @@
   =============== */
 
 .banner {
-    background-color: var(--primary);
+    background-color: var(--med-color);
     padding: 40px 0px;
     text-align: center;
 }
@@ -48,7 +48,7 @@
 }
 
 .search-container {
-    background-color: #fff;
+    background-color: var(--lt-neutral);
     border: 1px solid #000;
     left: 0;
     padding: 20px;
@@ -64,7 +64,7 @@
 }
 
 .search-bg {
-    background-color: #000;
+    background-color: var(--dark-neutral);
     height: 100vh;
     left: 0;
     opacity: 0.6;
@@ -84,14 +84,14 @@
 }
 
 .desc {
-    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    border-top: 1px solid var(--shadow-color);
     margin-top: 30px;
     padding: 30px 0px;
     text-align: left;
 }
 
 .benefits {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid var(--shadow-color);
     margin-bottom: 30px;
     text-align: left;
 }
@@ -101,19 +101,19 @@
   =============== */
 
 .banner__title {
-    color: var(--lt);
+    color: var(--lt-neutral);
     font-size: 2rem;
 }
 
 .breadCrumbs {
     display: flex;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid var(--shadow-color);
     margin: 0px;
     width: 90%;
 }
 
 .breadCrumb:not(:nth-of-type(1)) {
-    border-left: 1px solid rgba(0, 0, 0, 0.2);
+    border-left: 1px solid var(--shadow-color);
     margin-left: 10px;
     padding-left: 10px;
 }
@@ -175,7 +175,7 @@
 }
 
 .ui__btn {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid var(--shadow-color);
     width: 10%;
     text-align: right;
 }
@@ -186,7 +186,7 @@
 
 .search__input {
     border: none;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--dark-neutral);
     width: 100%;
 }
 
@@ -212,7 +212,7 @@
   =============== */
 
 .breadCrumb__link {
-    color: var(--dark);
+    color: var(--dark-color);
     font-size: .9rem;
     text-transform: capitalize;
 }
