@@ -2,7 +2,7 @@
         1. =GLOBAL SETTINGS (variables, resets)
         2. =PRIMARY LAYOUT (body, main)
         3. =SECONDARY LAYOUT (header, footer, sidebar)
-        4. =TERTIARY LAYOUT (logo, showcase)
+        4. =TERTIARY LAYOUT (logo, showcase, banner)
         5. =TEXT RELATED (headings, paragraphs, lists)
         6. =GENERAL STYLES (buttons, forms)
         7. =GENERAL CLASSES (modifier classes)
@@ -16,13 +16,13 @@
    =============== */
 
 :root {
-    --border-color: rgba(17, 31, 30, .52);
+    --shadow-color: rgba(17, 31, 30, .52);
     --dark-color: #233e3d;
     --med-dark-color: #467c7b;
     --med-color: #75b0af;
     --lt-color: #d2e5e5;
     --opaque-lt-color: rgba(210,229,229, .92);
-    --dark-neutral:#111f1e;
+    --dark-neutral:#0b1414;
     --lt-neutral: #f1f7f7;
 }
   
@@ -74,7 +74,7 @@ img {
    =============== */
   
 body {
-    background-color: var(--lt-neutral);
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -94,7 +94,7 @@ main {
     align-items: center;
     display: flex;
     justify-content: space-between;
-    position: fixed;
+    position: sticky;
     top: 0;
     z-index: 5;
     width: 100%;
@@ -102,7 +102,7 @@ main {
 
 .nav {
   background-color: var(--lt-neutral);
-  box-shadow: 0 3px 5px var(--border-color);
+  box-shadow: 0 3px 5px var(--shadow-color);
   width: 100%;
 }
 
@@ -111,7 +111,6 @@ main {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  margin: 5px auto;
 }
 
 .nav-content {
@@ -127,13 +126,13 @@ main {
 }
 
 .nav-content.--is-active {
-  box-shadow: 0 3px 5px var(--border-color);
+  box-shadow: 0 3px 5px var(--shadow-color);
   opacity: 1;
   transform: translateY(132.5px);
 }
 
 .sub-nav {
-  background-color: var(--dark-color);
+  background-color: var(--dark-neutral);
   padding-bottom: 10px;
   padding-top: 10px;
 }
@@ -169,6 +168,7 @@ main {
 .logo {
   align-items: center;
   display: flex;
+  margin: 5px 0;
   z-index: 10;
 }
 
@@ -178,6 +178,12 @@ main {
   background-position: center;
   background-size: cover;
   height: 100vh;
+}
+
+.banner {
+  background-color: var(--med-color);
+  padding: 20px 0;
+  text-align: center;
 }
 
 /* ===============
@@ -261,11 +267,11 @@ p {
 }
 
 .info__item:not(:nth-of-type(1)) {
-  border-left: 1px solid var(--border-color);
+  border-left: 1px solid var(--dark-color);
 }
 
-.showcase__title {
-  color: var(--lt-neutral);
+.showcase__title, .banner__title {
+  color: #ffffff;
   font-size: 2.5rem;
   letter-spacing: 6px;
   margin: 0 auto;
@@ -342,6 +348,7 @@ select {
    =============== */
 
 .--wrap-horizontal {
+  margin: 0 auto;
   width: 95%
 }
   
@@ -352,6 +359,10 @@ select {
 
 .--page-link {
   position: relative;
+}
+
+.--hidden {
+  display: none;
 }
 
 /* ===============
@@ -409,6 +420,14 @@ a {
   .--wrap-vertical {
       padding-bottom: 45px;
       padding-top: 45px;
+  }
+
+  .banner {
+    padding: 60px 0;
+  }
+
+  .showcase {
+    height: 700px;
   }
 
   .nav-toggle {
@@ -487,8 +506,8 @@ a {
   }
 
   .--wrap-vertical {
-      padding-bottom: 75px;
-      padding-top: 75px;
+    padding-bottom: 75px;
+    padding-top: 75px;
   }
 
   .showcase__title {
