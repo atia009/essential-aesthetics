@@ -1,9 +1,4 @@
 // objects
-const bannerObject = 
-{
- title: "Specials",
-};
-
 const specialsList = [
  {
   details: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi debitis beatae mollitia hic minima magnam iste maiores error ducimus dicta!",
@@ -22,10 +17,6 @@ const specialsList = [
  },
 ]
 
-// variables
-const banner = document.querySelector(".banner");
-const specials = document.querySelector(".specials");
-
 // functions
 function loadHtml()
 { 
@@ -35,11 +26,13 @@ function loadHtml()
 
 function loadBanner()
 {
+ const banner = document.querySelector(".banner");
  banner.innerHTML = `<h2 class="banner__title">Specials</h2>`;
 }
 
 function loadSpecials()
 {
+ const specials = document.querySelector(".specials");
  let specialsItems = specialsList.map(function(special)
  {
   return `<li class="special">
@@ -53,7 +46,4 @@ function loadSpecials()
 }
 
 // event listener
-window.addEventListener("DOMContentLoaded", function() 
-{
- loadHtml();
-})
+window.addEventListener("DOMContentLoaded", loadHtml);
