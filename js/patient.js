@@ -58,9 +58,15 @@ const faqs = document.querySelector(".faqs");
 // functions
 function loadHtml()
 {
- resources.insertAdjacentHTML(`afterbegin`, `<h1 class="resources__title">Patient Resources</h1>`);
+ loadBanner();
  loadPdfs();
  loadFaqs();
+}
+
+function loadBanner()
+{
+ const banner = document.querySelector(".banner");
+ banner.innerHTML = `<h1 class="banner__title">Patient Resources</h1>`;
 }
 
 function loadPdfs()
