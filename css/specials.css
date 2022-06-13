@@ -1,7 +1,7 @@
 /* CSS DIRECTORY
         1. =GLOBAL SETTINGS (imports)
         2. =PRIMARY LAYOUT (specials)
-        3. =SECONDARY LAYOUT (banner)
+        3. =SECONDARY LAYOUT
         4. =TERTIARY LAYOUT
         5. =TEXT RELATED (headings, paragraphs, lists)
         6. =GENERAL STYLES (buttons, forms)
@@ -62,12 +62,6 @@
   SECONDARY LAYOUT
   =============== */
 
-.banner {
-    background-color: var(--med-color);
-    padding: 40px 0px;
-    text-align: center;
-}
-
 /* ===============
   TERTIARY LAYOUT
   =============== */
@@ -75,11 +69,6 @@
 /* ===============
   TEXT RELATED
   =============== */
-
-.banner__title {
-    color: var(--lt-neutral);
-    font-size: 2rem;
-}
 
 .special__title {
     align-self: flex-end;
@@ -121,10 +110,6 @@
   =============== */
 
 @media (min-width: 900px) {
-    .banner {
-        padding: 60px 0;
-    }
-
     .specials {
         padding: 100px;
     }

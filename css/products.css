@@ -1,7 +1,7 @@
 /* CSS DIRECTORY
         1. =GLOBAL SETTINGS (imports)
         2. =PRIMARY LAYOUT (brands)
-        3. =SECONDARY LAYOUT (banner)
+        3. =SECONDARY LAYOUT
         4. =TERTIARY LAYOUT
         5. =TEXT RELATED (headings, paragraphs, lists)
         6. =GENERAL STYLES (buttons, forms)
@@ -20,12 +20,6 @@
 /* ===============
   PRIMARY LAYOUT
   =============== */
-
-.banner {
-    background-color: var(--med-color);
-    padding: 40px 0px;
-    text-align: center;
-}
 
 /* ===============
   SECONDARY LAYOUT
@@ -66,11 +60,6 @@
 /* ===============
   TEXT RELATED
   =============== */
-
-.banner__title {
-    color: var(--lt-neutral);
-    font-size: 2rem;
-}
 
 .brand__title {
     margin: 15px 0px;
@@ -128,10 +117,6 @@
   =============== */
 
 @media (min-width: 900px) {
-    .banner {
-        padding: 60px 0;
-    }
-
     .brands {
         padding: 100px 0;
     }
