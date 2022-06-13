@@ -27,7 +27,7 @@ function loadHtml()
 function loadBanner()
 {
  const banner = document.querySelector(".banner");
- banner.innerHTML = `<h2 class="banner__title">Specials</h2>`;
+ banner.innerHTML = `<h1 class="banner__title">Specials</h1>`;
 }
 
 function loadSpecials()

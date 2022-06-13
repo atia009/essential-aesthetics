@@ -37,7 +37,7 @@ function loadHtml()
 
 function loadBanner()
 {
- banner.innerHTML = `<h2 class="banner__title">${bannerObject.title}</h2>`;
+ banner.innerHTML = `<h1 class="banner__title">${bannerObject.title}</h1>`;
 }
 
 function loadBrands()

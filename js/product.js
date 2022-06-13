@@ -176,7 +176,7 @@ function loadHtml()
 
 function loadBanner(brandName = BRAND) {
   const banner = document.querySelector(`.banner`);
-  banner.innerHTML = `<h2 class="banner__title">${brandName}</h2>`;
+  banner.innerHTML = `<h1 class="banner__title">${brandName}</h1>`;
 }
 
 function loadBreadCrumb(brandName = BRAND)
