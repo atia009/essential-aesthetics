@@ -35,6 +35,7 @@ html {
     box-sizing: border-box;
     font-size: 16px;
     min-width: 390px;
+    scroll-behavior: smooth;
 }
 
 *,
@@ -178,6 +179,17 @@ main {
   background-position: center;
   background-size: cover;
   height: 100vh;
+  position: relative;
+}
+
+.showcase__nav {
+  border: 3px solid #ffffff;
+  border-radius: 6px;
+  bottom: 20%;
+  left: 50%;
+  padding: 0 55px;
+  position: absolute;
+  transform: translate(-50%);
 }
 
 .banner {
@@ -353,8 +365,7 @@ select {
 }
   
 .--wrap-vertical {
-  padding-bottom: 15px;
-  padding-top: 15px;
+  padding: 90px 0;
 }
 
 .--page-link {
@@ -363,6 +374,11 @@ select {
 
 .--hidden {
   display: none;
+}
+
+.--border-top {
+  border-top: 1px solid var(--opaque-lt-color);
+  padding-top: 40px;
 }
 
 /* ===============
@@ -379,6 +395,11 @@ a {
   letter-spacing: 2px;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.showcase__svg {
+  height: 50px;
+  width: 50px;
 }
 
 .sub-nav__link {
@@ -424,10 +445,6 @@ a {
 
   .banner {
     padding: 60px 0;
-  }
-
-  .showcase {
-    height: 700px;
   }
 
   .nav-toggle {
