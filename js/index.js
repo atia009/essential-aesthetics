@@ -2,19 +2,19 @@
 const cards = [
  {
   title: "Services",
-  body: " Lorem ipsum dolor sit amet consectetur adipisicing elit.Reprehenderit, repellendus aperiam quas totam alias velit voluptate est sed ratione architecto.",
+  body: " Expert dermatology services and comprehensive care.",
   btnText: "View All",
   btnLink: "services.html",
  },
  {
   title: "Products",
-  body: "  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae similique, repellat veritatis corrupti a cupiditate mollitia deleniti ad culpa minus?",
+  body: "List of offered products for creating and maintaining healthy skin.",
   btnText: "View All",
   btnLink: "products.html",
  },
  {
   title: "Specials",
-  body: " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti fugit animi voluptates assumenda repellat odit! Et obcaecati consequuntur veritatis reprehenderit.",
+  body: "Ongoing promotions and daily specials.",
   btnText: "Learn More",
   btnLink: "specials.html",
  },
