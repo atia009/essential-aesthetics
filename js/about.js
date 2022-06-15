@@ -44,11 +44,13 @@ function loadHtml()
 function loadShowcase()
 {
  showcase.innerHTML = `<h1 class="showcase__title">${showcaseObject.title}</h1>
- <a class="showcase__link" href="#mission-content">
- <svg class="showcase__svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-     <g stroke-linecap="round" class="nc-icon-wrapper" fill="none" stroke="#ffffff" stroke-width="2" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></g>
- </svg>
-</a>`;
+ <div class="showcase__nav">
+   <a class="showcase__link" href="#mission-content">
+   <svg class="showcase__svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+       <g stroke-linecap="round" class="nc-icon-wrapper" fill="none" stroke="#ffffff" stroke-width="2" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></g>
+   </svg>
+   </a>
+ </div>`;
  showcase.style.backgroundImage = `linear-gradient(rgba(8, 15, 15, .6), rgba(8, 15, 15, .6)), url("${showcaseObject.src}")`;
 }
 
