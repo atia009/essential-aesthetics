@@ -167,6 +167,7 @@ function updateTitle()
 
 function loadHtml()
 {
+ updateTitle();
  loadBanner();
  loadBreadCrumb();
  loadSearch();
@@ -567,8 +568,4 @@ function storeBrand(brandName, brandIndex)
 }
 
 // event listener
-window.addEventListener("DOMContentLoaded", function() 
-{
- updateTitle();
- loadHtml();
-})
+window.addEventListener("DOMContentLoaded", loadHtml);

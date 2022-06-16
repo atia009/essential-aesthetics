@@ -50,11 +50,6 @@ const faqsObject = [
  },
 ]
 
-// variables
-const resources = document.querySelector(".resources");
-const pdfs = document.querySelector(".pdfs");
-const faqs = document.querySelector(".faqs");
-
 // functions
 function loadHtml()
 {
@@ -71,6 +66,7 @@ function loadBanner()
 
 function loadPdfs()
 {
+ const pdfs = document.querySelector(".pdfs");
  let pdfsList = pdfsObject.map(function(pdf)
  {
   return `<li class="pdf bg--hover">
@@ -82,6 +78,7 @@ function loadPdfs()
 
 function loadFaqs()
 {
+ const faqs = document.querySelector(".faqs");
  let faqsList = faqsObject.map(function(faq)
  {
   return `<li class="faq">
@@ -128,7 +125,4 @@ function toggleDisplay(element, displayValue)
 }
 
 // event listener
-window.addEventListener("DOMContentLoaded", function() 
-{
- loadHtml();
-})
+window.addEventListener("DOMContentLoaded", loadHtml);

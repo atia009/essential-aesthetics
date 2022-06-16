@@ -25,24 +25,24 @@ const brandsObject = [
 
 // variables
 const mediaDesktop = window.matchMedia(`(min-width:900px)`);
-const banner = document.querySelector(".banner");
-const brands = document.querySelector(".brands");
 
 // functions
 function loadHtml()
 {
  loadBanner();
  loadBrands();
+ updateDescInterface(mediaDesktop);
 }
 
 function loadBanner()
 {
+ const banner = document.querySelector(".banner");
  banner.innerHTML = `<h1 class="banner__title">${bannerObject.title}</h1>`;
 }
 
 function loadBrands()
 {
-  let brandsItems = brandsObject.map(function(brand)
+ let brandsItems = brandsObject.map(function(brand)
  {
   return `<li class="brand">
          <h3 class="brand__title">${brand.title}</h3>
@@ -55,6 +55,8 @@ function loadBrands()
         </div>
       </li>`
  })
+
+ const brands = document.querySelector(".brands");
  brands.insertAdjacentHTML(`beforeend`, brandsItems.join(""));
  updateBrand();
 }
@@ -153,11 +155,7 @@ function updateDescInterface(screenSize)
 }
 
 // event listeners
-window.addEventListener("DOMContentLoaded", function() 
-{
- loadHtml();
- updateDescInterface(mediaDesktop);
-})
+window.addEventListener("DOMContentLoaded", loadHtml);
 
 mediaDesktop.addEventListener("change", function(screenSize)
 {

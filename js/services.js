@@ -39,10 +39,6 @@ const servicesList =
  },
 ]
 
-// variables
-const showcase = document.querySelector(".showcase");
-const services = document.querySelector(".services");
-
 // functions
 function loadHtml()
 {
@@ -52,6 +48,7 @@ function loadHtml()
 
 function loadShowcase()
 {
+  const showcase = document.querySelector(".showcase");
   showcase.innerHTML = `<h1 class="showcase__title">${showcaseObject.title}</h1>
   <div class="showcase__nav">
     <a class="showcase__link" href="#main-content">
@@ -75,11 +72,9 @@ function loadServices()
            </button>
       </li>`
  })
-  services.insertAdjacentHTML(`beforeend`, serviceItems.join(""));
+ const services = document.querySelector(".services");
+ services.insertAdjacentHTML(`beforeend`, serviceItems.join(""));
 }
 
 // event listeners
-window.addEventListener("DOMContentLoaded", function() 
-{
- loadHtml();
-})
+window.addEventListener("DOMContentLoaded", loadHtml);

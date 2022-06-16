@@ -28,11 +28,6 @@ const members = [
  },
 ]
 
-// variables
-const showcase = document.querySelector(".showcase");
-const mission = document.querySelector(".mission");
-const team = document.querySelector(".team");
-
 // functions
 function loadHtml()
 {
@@ -43,6 +38,7 @@ function loadHtml()
 
 function loadShowcase()
 {
+ const showcase = document.querySelector(".showcase");
  showcase.innerHTML = `<h1 class="showcase__title">${showcaseObject.title}</h1>
  <div class="showcase__nav">
    <a class="showcase__link" href="#mission-content">
@@ -56,6 +52,7 @@ function loadShowcase()
 
 function loadMission()
 {
+ const mission = document.querySelector(".mission");
  mission.innerHTML = `<h2 class="mission__title">${missionObject.title}</h2>
  <p class="mission__subtitle">${missionObject.location}</p>
  <p class="mission__body">${missionObject.statement}</p>`
@@ -71,14 +68,13 @@ function loadTeam()
    <p class="member__body">${member.summary}</p>
    <p class="member__contact">${member.email}</p>
   </div>
-`
+ `
  })
+
+ const team = document.querySelector(".team");
  team.insertAdjacentHTML(`beforeend`, membersList.join(""));
  team.insertAdjacentHTML(`afterbegin`, `<div class="team__divider"></div>`);
 }
 
 // event listeners
-window.addEventListener("DOMContentLoaded", function() 
-{
- loadHtml();
-})
+window.addEventListener("DOMContentLoaded", loadHtml);
