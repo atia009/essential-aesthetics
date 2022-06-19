@@ -439,8 +439,8 @@ a {
   }
       
   .--wrap-vertical {
-      padding-bottom: 45px;
-      padding-top: 45px;
+      padding-bottom: 80px;
+      padding-top: 80px;
   }
 
   .banner {
@@ -523,8 +523,8 @@ a {
   }
 
   .--wrap-vertical {
-    padding-bottom: 75px;
-    padding-top: 75px;
+    padding-bottom: 100px;
+    padding-top: 100px;
   }
 
   .showcase__title {
