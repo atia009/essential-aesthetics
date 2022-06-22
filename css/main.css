@@ -133,7 +133,7 @@ main {
 }
 
 .sub-nav {
-  background-color: var(--dark-neutral);
+  background-color: var(--med-color);
   padding-bottom: 10px;
   padding-top: 10px;
 }
