@@ -21,27 +21,23 @@
   PRIMARY LAYOUT
   =============== */
 
-.team {
-    align-items: center;
+.main, .team {
     display: flex;
-    flex-direction: column;
-}
-
-.team__divider {
-    background-color: var(--dark-color);
-    height: 1px;
-    max-width: 600px;
-    width: 85%;
+    flex-flow: column nowrap;
+    gap: 60px;
 }
   
-.member {
-    background-color: var(--lt-color);
-    border-radius: 3px;
-    box-shadow: 0 10px 60px -20px var(--shadow-color);
+/* .member {
     margin-top: 40px;
     max-width: 600px;
     width: 85%;
-    text-align: center;
+} */
+
+.member {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 20px;
+  width: 100%;
 }
 
 
@@ -50,17 +46,11 @@
   =============== */
 
 .mission {
-    align-items: center;
+    align-items: flex-start;
     display: flex;
-    flex-direction: column;
-}
-
-.mission-container {
-    background-position: center;
-    background-size: cover;
-    height: 300px;
-    position: relative;
-    width: 100%;
+    flex-flow: column nowrap;
+    gap: 20px;
+    /* margin: 0 auto 60px; */
 }
 
 /* ===============
@@ -71,35 +61,21 @@
   TEXT RELATED
   =============== */
 
-.mission__subtitle {
-    font-size: 0.7rem;
-    margin: 20px 0 0;
+.mission__title, .member__title {
+  color: var(--med-color);
+  font-size: 1.7rem;
 }
 
-.mission__body {
-    margin: 15px 20px 0;
-    max-width: 600px;
+.member__info {
+  color: var(--dark-neutral);
+  font-size: .9rem;
+  text-transform: uppercase;
 }
 
-.member__title {
-    border-bottom: 1px solid var(--med-color);
-    margin: 0px;
-    padding: 10px 0px;
-    text-transform: initial;
-}
-
-.member__body {
-    margin: 20px auto;
-    max-width: 800px; 
-    width: 90%;
+.mission__body, .member__title, .member__subtitle, .member__body, .member__contact {
+  text-align: left;
 }
   
-.member__contact {
-    color: var(--med);
-    margin: 0px auto 20px auto;
-    width: 90%;
-}
-
 /* ===============
   GENERAL STYLES
   =============== */
@@ -112,12 +88,11 @@
   SALIENT FEATURES
   =============== */
 
-.member__img {
-    border-radius: 3px;
-    object-fit: cover;
-    object-position: top;
-    height: 400px;
-    width: 100%;
+.mission__img, .member__img {
+	left: calc(-50vw + 50%);
+  max-width: initial;
+  position: relative;
+  width: 100vw;
 }
 
 /* ===============
@@ -129,15 +104,6 @@
   =============== */
 
 @media (min-width: 900px) {
-    .mission-container {
-        height: 500px;
-    }
-
-    .mission__body {
-        text-align: left;
-        width: 500px;
-    }
-    
     .member {
         margin-top: 60px;
     }
